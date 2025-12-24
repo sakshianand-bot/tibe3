@@ -78,8 +78,23 @@ const Footer = () => {
                 <FaMapMarkerAlt className="mr-3 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Office</p>
-                  <p className="text-gray-300 text-sm">600 1st Ave STE 102</p>
-                  <p className="text-gray-300 text-sm">Seattle, WA 98104</p>
+                  <p className="text-gray-300 text-sm">600 1st Ave STE 102, Seattle, WA 98104</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start pt-2">
+                <FaEnvelope className="mr-3 text-blue-400 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-300 font-medium">Email</p>
+                  <p className="text-gray-300 text-sm">Support@tiberiusstrategies.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-start pt-2">
+                <FaPhone className="mr-3 text-blue-400 mt-1 flex-shrink-0" />
+                <div>
+                  <p className="text-gray-300 font-medium">Phone</p>
+                  <p className="text-gray-300 text-sm">(206) 555-1234</p>
                 </div>
               </div>
               
