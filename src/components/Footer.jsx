@@ -94,7 +94,7 @@ const Footer = () => {
                 <FaPhone className="mr-3 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Phone</p>
-                  <p className="text-gray-300 text-sm">(206) 555-1234</p>
+                  <p className="text-gray-300 text-sm">(888) 225-6920</p>
                 </div>
               </div>
               
