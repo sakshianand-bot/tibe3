@@ -25,6 +25,12 @@ const Footer = () => {
 
   return (
     <footer className="bg-gray-900 text-white">
+      {/* D-U-N-S Banner */}
+      <div className="w-full bg-black text-white py-2">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <div className="text-sm font-medium">Registered with <span className="font-semibold">Dun &amp; Bradstreet</span> — D‑U‑N‑S® Number: 144923452</div>
+        </div>
+      </div>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -41,6 +47,10 @@ const Footer = () => {
               </div>
               <h2 className="text-xl font-bold">Tiberius Strategies</h2>
               <p className="text-gray-400 text-sm">(DBA Tiberius Management)</p>
+              <div className="inline-block bg-black text-white px-3 py-1 rounded-md shadow-sm mt-2" aria-label="D-U-N-S registration">
+                <div className="text-xs">Registered with <span className="font-medium">Dun &amp; Bradstreet</span></div>
+                <div className="text-sm font-semibold">D‑U‑N‑S®: 144923452</div>
+              </div>
             </div>
             
             <p className="text-gray-300 text-sm">

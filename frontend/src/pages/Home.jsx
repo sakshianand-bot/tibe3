@@ -397,10 +397,18 @@ const Home = () => {
         </div>
       </section>
 
+      {/* D-U-N-S Full Banner */}
+      <div className="w-full bg-black text-white py-3">
+        <div className="max-w-7xl mx-auto px-4 text-center">
+          <div className="text-sm uppercase tracking-wide font-medium">Registered with <span className="font-semibold">Dun &amp; Bradstreet</span> — D‑U‑N‑S® Number: 144923452</div>
+        </div>
+      </div>
+
       {/* Why Choose Section */}
       <section className="py-20 bg-gradient-to-b from-background to-navy-50 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
+
             <h2 className="text-4xl md:text-5xl font-bold text-navy-900 mb-4">
               Why Choose Tiberius Strategies
             </h2>
