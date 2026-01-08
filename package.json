@@ -1,0 +1,11 @@
+{
+  "name": "tibe3-root",
+  "private": true,
+  "scripts": {
+    "build": "cd frontend && npm run vercel-build",
+    "vercel-build": "cd frontend && npm run vercel-build"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
