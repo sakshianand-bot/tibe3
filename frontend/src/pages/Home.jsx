@@ -70,6 +70,7 @@ const BenefitCard = ({ icon, title, description, image, details }) => {
 const Home = () => {
   const [showModal, setShowModal] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
+  const [showDunsPopup, setShowDunsPopup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ success: false, message: '' });
   const formRef = useRef(null);
@@ -118,9 +119,18 @@ const Home = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowPopup(true);
-    }, 1000); // Show popup after 4 seconds
+    }, 1000); // Show popup after 1 second
 
     return () => clearTimeout(timer); // Clean up on component unmount
+  }, []);
+
+  // Show the D-U-N-S popup shortly after page load
+  useEffect(() => {
+    const dunsTimer = setTimeout(() => {
+      setShowDunsPopup(true);
+    }, 1500);
+
+    return () => clearTimeout(dunsTimer);
   }, []);
 
   const quickBullets = [
@@ -211,6 +221,27 @@ const Home = () => {
               alt="Special Offer"
               className="h-32 w-auto object-contain drop-shadow-lg"
             />
+          </div>
+        </div>
+      )}
+
+      {/* D-U-N-S Left Popup */}
+      {showDunsPopup && (
+        <div className="fixed left-4 top-1/2 transform -translate-y-1/2 z-50">
+          <div className="bg-black text-white rounded-lg px-4 py-3 w-56 animate-fade-in-up ring-2 ring-white/20 shadow-[0_24px_80px_rgba(255,255,255,0.18)] backdrop-blur-md border border-white/6">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <div className="text-xs uppercase tracking-wide">Registered with <span className="font-semibold">Dun &amp; Bradstreet</span></div>
+                <div className="text-sm font-semibold mt-1">D‑U‑N‑S®:144923452</div>
+              </div>
+              <button
+                onClick={() => setShowDunsPopup(false)}
+                aria-label="Close D-U-N-S popup"
+                className="text-gray-100 hover:text-white ml-2"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
           </div>
         </div>
       )}
@@ -396,13 +427,6 @@ const Home = () => {
           <div className="text-white/60 text-sm">Scroll to learn more</div>
         </div>
       </section>
-
-      {/* D-U-N-S Full Banner */}
-      <div className="w-full bg-black text-white py-3">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <div className="text-sm uppercase tracking-wide font-medium">Registered with <span className="font-semibold">Dun &amp; Bradstreet</span> — D‑U‑N‑S® Number: 144923452</div>
-        </div>
-      </div>
 
       {/* Why Choose Section */}
       <section className="py-20 bg-gradient-to-b from-background to-navy-50 px-4">
