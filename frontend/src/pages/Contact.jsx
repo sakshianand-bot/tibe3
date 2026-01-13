@@ -14,6 +14,8 @@ const Contact = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ success: false, message: '' });
+  const [marketingConsent, setMarketingConsent] = useState(false);
+  const [nonMarketingConsent, setNonMarketingConsent] = useState(false);
   const formRef = useRef(null);
 
   const handleSubmit = async (e) => {
@@ -234,10 +236,42 @@ const Contact = () => {
                 ></textarea>
               </div>
 
+              <div className="space-y-4">
+                <div className="bg-gray-50 p-4 rounded-lg">
+                  <p className="text-sm font-medium text-gray-700 mb-3">Consent to receive text messages:</p>
+                  
+                  <div className="space-y-3">
+                    <label className="flex items-start gap-3 cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors">
+                      <input
+                        type="checkbox"
+                        checked={marketingConsent}
+                        onChange={(e) => setMarketingConsent(e.target.checked)}
+                        className="mt-1 w-4 h-4 text-sky-600 border-gray-300 rounded focus:ring-sky-500 focus:ring-2"
+                      />
+                      <span className="text-sm text-gray-600">
+                        By checking this box, I agree to receive marketing and promotional text messages from Tiberius Strategies. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help. Privacy Policy
+                      </span>
+                    </label>
+                    
+                    <label className="flex items-start gap-3 cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors">
+                      <input
+                        type="checkbox"
+                        checked={nonMarketingConsent}
+                        onChange={(e) => setNonMarketingConsent(e.target.checked)}
+                        className="mt-1 w-4 h-4 text-sky-600 border-gray-300 rounded focus:ring-sky-500 focus:ring-2"
+                      />
+                      <span className="text-sm text-gray-600">
+                        By checking this box, I agree to receive non-marketing text messages from Tiberius Strategies (e.g., appointment reminders, service updates, account notifications). Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help. Privacy Policy
+                      </span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
               <div className="pt-2">
                 <button
                   type="submit"
-                  disabled={isSubmitting}
+                  disabled={isSubmitting || !marketingConsent || !nonMarketingConsent}
                   className="w-full bg-gradient-to-r from-sky-500 to-sky-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-sky-600 hover:to-sky-700 transition-all duration-300 shadow-md flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
