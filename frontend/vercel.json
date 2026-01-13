@@ -8,5 +8,11 @@
   ],
   "installCommand": "npm ci --include=dev",
   "buildCommand": "npm run vercel-build",
-  "outputDirectory": "dist"
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
