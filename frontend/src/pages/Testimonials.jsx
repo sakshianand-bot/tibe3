@@ -197,23 +197,7 @@ const Testimonials = () => {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="group relative bg-gradient-to-br from-gray-800 to-gray-900 text-gray-300 font-semibold py-4 px-10 rounded-2xl border-2 border-gray-700 hover:border-sky-500 hover:shadow-xl transition-all duration-300 text-lg">
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                View More Testimonials
-                <Users className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
-              </span>
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-gray-800/50 to-gray-900 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-            </button>
-            
-            <button className="group relative bg-white border-2 border-blue-500 rounded-2xl text-blue-600 font-semibold py-4 px-10 hover:bg-blue-50 transition-all duration-200 text-lg">
-              <span className="relative z-10 flex items-center justify-center gap-2">
-                Start Free Evaluation
-                <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </span>
-            </button>
-          </div>
-        </div>
+                  </div>
       </div>
     </div>
   );

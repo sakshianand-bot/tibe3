@@ -29,7 +29,7 @@ export default function TermsAndConditions() {
         <div className="prose prose-sm sm:prose max-w-none">
           <div className="mb-6 sm:mb-8">
             <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6">
-              These terms and conditions outline the rules and regulations for the use of TIBERIUS STRATEGIES's Website, located at TIBERIUS STRATEGIES: https://wwwtiberiusstrategies.com/
+              These terms and conditions outline the rules and regulations for the use of TIBERIUS STRATEGIES's Website, located at TIBERIUS STRATEGIES: <a href="https://wwwtiberiusstrategies.com/" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">https://wwwtiberiusstrategies.com/</a>
             </p>
             <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6">
               By accessing this website we assume you accept these terms and conditions. Do not continue to use TIBERIUS STRATEGIES if you do not agree to take all of the terms and conditions stated on this page.
@@ -37,7 +37,7 @@ export default function TermsAndConditions() {
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 mt-8">SMS Messaging Terms & Conditions</h2>
             <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6">
-              These terms and conditions outline the rules and regulations for the use of TIBERIUS STRATEGIES's Website, located at TIBERIUS STRATEGIES: https://wwwtiberiusstrategies.com/
+              These terms and conditions outline the rules and regulations for the use of TIBERIUS STRATEGIES's Website, located at TIBERIUS STRATEGIES: <a href="https://wwwtiberiusstrategies.com/" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">https://wwwtiberiusstrategies.com/</a>
             </p>
             <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6">
               By accessing this website we assume you accept these terms and conditions. Do not continue to use TIBERIUS STRATEGIES if you do not agree to take all of the terms and conditions stated on this page.
@@ -94,7 +94,7 @@ export default function TermsAndConditions() {
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 mt-8">1. Privacy Policy:</h2>
             <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6">
-              For privacy-related inquires, please refer to our Privacy Policy at https://wwwtiberiusstrategies.com/
+              For privacy-related inquires, please refer to our <a href="https://wwwtiberiusstrategies.com/" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
             </p>
             <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6">
               We comply with all applicable laws and regulation, including the Telephone Consumer Protection Act (TCPA) and CTIA guidelines, regarding the use of SMS communications.

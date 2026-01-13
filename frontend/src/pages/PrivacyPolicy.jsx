@@ -237,7 +237,7 @@ export default function PrivacyPolicy() {
 
           <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mt-8 mb-3 sm:mb-4">14. CONTACT US</h2>
           <p className="leading-relaxed">If you have questions about this Privacy Policy or how your information is handles, contact us at:</p>
-          <p className="leading-relaxed">+1(800)-225-6920 or email us at: support@tiberiusstrategies.com</p>
+          <p className="leading-relaxed">Contact us at: <a href="tel:+18002256920" className="text-blue-600 hover:text-blue-800 underline">+1(800)-225-6920</a> or email us at: <a href="mailto:support@tiberiusstrategies.com" className="text-blue-600 hover:text-blue-800 underline">support@tiberiusstrategies.com</a></p>
 
           <div className="mt-8 p-4 bg-gray-100 rounded-lg">
             <p className="text-sm text-gray-600 text-center">
