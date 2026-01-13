@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { CheckCircle, Shield, Globe2, Target, Users, Clock, ArrowRight } from 'lucide-react';
 
 const WhyChooseUs = () => {
@@ -174,10 +175,13 @@ const WhyChooseUs = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-sky-900 font-semibold py-4 px-10 rounded-full hover:bg-sky-50 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-3">
+              <Link 
+                to="/contact" 
+                className="bg-white text-sky-900 font-semibold py-4 px-10 rounded-full hover:bg-sky-50 transition-all duration-300 text-lg shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center gap-3"
+              >
                 Start Free Evaluation
                 <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
               <button className="bg-transparent border-2 border-white text-white font-semibold py-4 px-10 rounded-full hover:bg-white/20 transition-all duration-300 text-lg">
                 Call (888) 225-6920
               </button>

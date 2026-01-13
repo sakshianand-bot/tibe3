@@ -375,14 +375,6 @@ const HowItWorks = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 bg-white text-amber-700 font-bold rounded-xl hover:shadow-xl flex items-center space-x-2"
-            >
-              <Search className="h-5 w-5" />
-              <span>Free Claim Search</span>
-            </motion.button>
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

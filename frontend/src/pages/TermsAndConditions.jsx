@@ -94,7 +94,7 @@ export default function TermsAndConditions() {
 
             <h2 className="text-xl sm:text-2xl font-semibold text-gray-800 mb-3 sm:mb-4 mt-8">1. Privacy Policy:</h2>
             <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6">
-              For privacy-related inquires, please refer to our <a href="https://wwwtiberiusstrategies.com/" className="text-blue-600 hover:text-blue-800 underline" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+              For privacy-related inquires, please refer to our <Link to={ROUTES.PUBLIC.PRIVACY_POLICY} className="text-blue-600 hover:text-blue-800 underline">Privacy Policy</Link>
             </p>
             <p className="text-gray-700 leading-relaxed mb-5 sm:mb-6">
               We comply with all applicable laws and regulation, including the Telephone Consumer Protection Act (TCPA) and CTIA guidelines, regarding the use of SMS communications.
