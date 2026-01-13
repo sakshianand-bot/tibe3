@@ -126,12 +126,13 @@ const Footer = () => {
             </div>
             
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              <a 
-                href="/privacy-policy" 
+              <Link 
+                to={ROUTES.PUBLIC.PRIVACY_POLICY} 
                 className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
               >
                 Privacy Policy
-              </a>
+              </Link>
+
               <Link 
                 to={ROUTES.PUBLIC.TERMS_AND_CONDITIONS}
                 className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
