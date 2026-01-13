@@ -29,6 +29,8 @@ const Navbar = () => {
     { name: 'How It Works', path: ROUTES.PUBLIC.HOW_IT_WORKS },
     { name: 'Services', path: ROUTES.PUBLIC.SERVICES },
     { name: 'Why Choose Us', path: ROUTES.PUBLIC.WHY_CHOOSE_US },
+    { name: 'Privacy Policy', path: ROUTES.PUBLIC.PRIVACY_POLICY },
+    { name: 'Terms & Conditions', path: ROUTES.PUBLIC.TERMS_AND_CONDITIONS },
     { name: 'FAQ', path: ROUTES.PUBLIC.FAQ },
     { name: 'Testimonials', path: ROUTES.PUBLIC.TESTIMONIALS },
     { name: 'Contact Us', path: ROUTES.PUBLIC.CONTACT }

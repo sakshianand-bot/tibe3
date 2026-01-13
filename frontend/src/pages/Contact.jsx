@@ -136,20 +136,6 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            {/* Free Case Evaluation */}
-            <div className="bg-gradient-to-br from-sky-500 to-sky-600 rounded-2xl p-8 text-white shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
-                <Calendar className="w-6 h-6 text-white" />
-                <h2 className="text-2xl font-bold">Free Case Evaluation</h2>
-              </div>
-              <p className="mb-6 text-sky-100">
-                Schedule a free consultation with our team to discuss your surplus funds claim.
-              </p>
-              <button className="w-full bg-white text-sky-600 font-semibold py-3 px-6 rounded-lg hover:bg-sky-50 transition-all duration-300 shadow-md">
-                Schedule Now
-              </button>
-            </div>
           </div>
 
           {/* Contact Form */}

@@ -338,23 +338,6 @@ const Services = memo(function Services() {
             Our success is tied to yours. We only get paid when you recover your funds.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={handleStartEvaluation}
-              className={`bg-gradient-to-r from-sky-600 to-sky-800 text-white ${commonButtonStyles} hover:from-sky-700 hover:to-sky-900 shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500`}
-              aria-label="Start free evaluation"
-            >
-              Start Free Evaluation
-            </button>
-            <button 
-              onClick={handleViewCases}
-              className={`bg-white text-sky-700 border-2 border-sky-600 ${commonButtonStyles} hover:bg-sky-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-sky-500`}
-              aria-label="View sample cases"
-            >
-              View Sample Cases
-            </button>
-          </div>
-          
           <p className="mt-8 text-gray-500 text-sm">
             *Client responsible for court filing fees in some jurisdictions. We never charge upfront fees for our recovery services.
           </p>
