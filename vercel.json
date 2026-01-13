@@ -1,5 +1,18 @@
 {
-  "installCommand": "cd frontend && npm ci --include=dev",
-  "buildCommand": "cd frontend && npm run vercel-build",
-  "outputDirectory": "frontend/dist"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    }
+  ],
+  "installCommand": "npm ci --include=dev",
+  "buildCommand": "npm run vercel-build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
