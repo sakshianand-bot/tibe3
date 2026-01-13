@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Mail, Phone, MapPin, Clock, MessageCircle, Calendar, X, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { ROUTES } from '../routes/routes.config';
 
 const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -266,6 +268,22 @@ const Contact = () => {
                     </label>
                   </div>
                 </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-3 pt-2 border-t border-gray-200 items-center justify-center">
+                <Link 
+                  to={ROUTES.PUBLIC.PRIVACY_POLICY}
+                  className="text-sky-600 hover:text-sky-700 text-sm font-medium transition-colors flex items-center justify-center"
+                >
+                  Privacy Policy
+                </Link>
+                <div className="hidden sm:block w-px h-4 bg-gray-300"></div>
+                <Link 
+                  to={ROUTES.PUBLIC.TERMS_AND_CONDITIONS}
+                  className="text-sky-600 hover:text-sky-700 text-sm font-medium transition-colors flex items-center justify-center"
+                >
+                  Terms and Conditions
+                </Link>
               </div>
 
               <div className="pt-2">
