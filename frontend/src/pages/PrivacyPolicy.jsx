@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../routes/routes.config';
 
-const PrivacyPolicy = () => {
+export default function PrivacyPolicy() {
   useEffect(() => {
     // Set the document title
     document.title = 'Privacy Policy | Tiberius Strategies';
@@ -262,5 +262,3 @@ const PrivacyPolicy = () => {
     </div>
   );
 };
-
-export default PrivacyPolicy;
