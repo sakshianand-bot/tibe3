@@ -146,7 +146,7 @@ export default function PrivacyPolicy() {
 
           <h4 className="text-md font-semibold text-gray-800 mt-4 mb-2">Help & Support:</h4>
           <ul className="list-disc pl-5 sm:pl-6 space-y-2 mb-4">
-            <li className="leading-relaxed">Reply "HELP" for assistance or contact us at info@radcreativeventures.co.site</li>
+            <li className="leading-relaxed">Reply "HELP" for assistance or contact us at <a href="mailto:support@tiberiusstrategies.com" className="text-blue-600 hover:text-blue-800 underline">support@tiberiusstrategies.com</a></li>
             <li className="leading-relaxed">Customer support is available during regular business hours</li>
           </ul>
 
