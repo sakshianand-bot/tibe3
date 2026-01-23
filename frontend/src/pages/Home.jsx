@@ -537,12 +537,9 @@ const Home = () => {
               {/* Animated Dots Overlay */}
               <div className="absolute inset-0">
                 {[
-                  { top: '20%', left: '15%', label: 'CA' },
-                  { top: '30%', left: '50%', label: 'TX' },
-                  { top: '25%', left: '80%', label: 'FL' },
-                  { top: '40%', left: '35%', label: 'IL' },
-                  { top: '55%', left: '60%', label: 'GA' },
-                  { top: '45%', left: '20%', label: 'WA' },
+                  { top: '38%', left: '45%', label: 'Ohio' },
+                  { top: '65%', left: '55%', label: 'Florida' },
+                  { top: '35%', left: '25%', label: 'Arizona' },
                 ].map((dot, index) => (
                   <div
                     key={index}
