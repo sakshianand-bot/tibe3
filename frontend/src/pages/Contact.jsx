@@ -241,8 +241,8 @@ const Contact = () => {
                           className="mt-1 w-4 h-4 text-sky-600 border-gray-300 rounded focus:ring-sky-500 focus:ring-2"
                         />
                         <span className="text-sm text-gray-600">
-                          By checking this box, I agree to receive marketing and promotional text messages from Tiberius Strategies. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help. Privacy Policy
-                        </span>
+                          By checking this box, I agree to receive marketing and promotional text messages from Tiberius Strategies. Messages may be sent up to 4 times per month. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help.
+                          </span>
                       </label>
                       
                       {/* Non-Marketing Consent */}
@@ -254,8 +254,8 @@ const Contact = () => {
                           className="mt-1 w-4 h-4 text-sky-600 border-gray-300 rounded focus:ring-sky-500 focus:ring-2"
                         />
                         <span className="text-sm text-gray-600">
-                          By checking this box, I agree to receive non-marketing text messages from Tiberius Strategies (e.g., appointment reminders, service updates, account notifications). Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help. Privacy Policy
-                        </span>
+                          By checking this box, I agree to receive non marketing text messages from Tiberius Strategies such as appointment reminders, service updates, and account notifications. Messages may be sent as needed based on my activity or account status. Message and data rates may apply. Reply STOP to unsubscribe.
+                          </span>
                       </label>
 
                     </div>
