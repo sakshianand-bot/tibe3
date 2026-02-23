@@ -270,7 +270,7 @@ const Contact = () => {
 
                   <button
                     type="submit"
-                    disabled={isSubmitting || !marketingConsent || !nonMarketingConsent}
+                    disabled={isSubmitting}
                     className="w-full bg-gradient-to-r from-sky-600 to-sky-500 text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-sky-200 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
                   >
                     {isSubmitting ? (

@@ -19,6 +19,8 @@ const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy'));
 const TermsAndConditions = lazy(() => import('../pages/TermsAndConditions'));
 const CookiePolicy = lazy(() => import('../pages/CookiePolicy'));
 const Disclaimer = lazy(() => import('../pages/Disclaimer'));
+const Login = lazy(() => import('../pages/Login'));
+const SignUp = lazy(() => import('../pages/SignUp'));
 
 // Create a component that wraps the page with Suspense
 const LazyPage = ({ Page }) => (
@@ -85,6 +87,14 @@ const routes = [
       {
         path: ROUTES.PUBLIC.DISCLAIMER,
         element: <LazyPage Page={Disclaimer} />
+      },
+      {
+        path: ROUTES.PUBLIC.LOGIN,
+        element: <LazyPage Page={Login} />
+      },
+      {
+        path: ROUTES.PUBLIC.SIGN_UP,
+        element: <LazyPage Page={SignUp} />
       }
     ]
   },

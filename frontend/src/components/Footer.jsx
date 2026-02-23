@@ -40,16 +40,16 @@ const Footer = () => {
                 />
               </div>
               <h2 className="text-xl font-bold">Tiberius Strategies</h2>
-              <p className="text-gray-400 text-sm">(DBA Tiberius Management)</p>
-              <div className="inline-block bg-black text-white px-3 py-1 rounded-md shadow-sm mt-2" aria-label="D-U-N-S registration">
+              {/* <p className="text-gray-400 text-sm">(DBA Tiberius Management)</p> */}
+              {/* <div className="inline-block bg-black text-white px-3 py-1 rounded-md shadow-sm mt-2" aria-label="D-U-N-S registration">
                 <div className="text-xs">Registered with <span className="font-medium">Dun &amp; Bradstreet</span></div>
                 <div className="text-sm font-semibold">D‑U‑N‑S®: 144923452</div>
-              </div>
+              </div> */}
             </div>
             
-            <p className="text-gray-300 text-sm">
+            {/* <p className="text-gray-300 text-sm">
               Empowering businesses with strategic insights and innovative solutions for sustainable growth and market leadership.
-            </p>
+            </p> */}
           </div>
 
           {/* Column 2: Quick Links */}

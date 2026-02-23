@@ -11,10 +11,23 @@ export const ROUTES = {
     PRIVACY_POLICY: '/privacy-policy',
     TERMS_AND_CONDITIONS: '/terms-and-conditions',
     COOKIE_POLICY: '/cookie-policy',
-    DISCLAIMER: '/disclaimer'
+    DISCLAIMER: '/disclaimer',
+    LOGIN: '/login',
+    SIGN_UP: '/sign-up'
+  },
+  ADMIN: {
+    LOGIN: '/admin/login',
+    SIGN_UP: '/admin/sign-up',
+    DASHBOARD: '/admin/dashboard',
+    USERS: '/admin/users',
+    SETTINGS: '/admin/settings'
+  },
+  AUTH: {
+    PROFILE: '/profile',
+    SETTINGS: '/settings'
   }
-  // Add AUTH and PROTECTED routes when needed
 };
 
 export const PUBLIC_ROUTES = Object.values(ROUTES.PUBLIC);
-// Export other route groups when added
+export const ADMIN_ROUTES = Object.values(ROUTES.ADMIN);
+export const AUTH_ROUTES = Object.values(ROUTES.AUTH);

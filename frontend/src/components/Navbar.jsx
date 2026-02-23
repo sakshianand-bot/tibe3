@@ -107,6 +107,16 @@ const Navbar = () => {
                 ></span>
               </button>
             ))}
+            
+            {/* Auth Buttons - Hidden */}
+            {/* <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-white/20">
+              <button
+                onClick={() => handleNavigation(ROUTES.PUBLIC.LOGIN)}
+                className="px-4 py-2 text-sm font-medium text-white/90 hover:text-white transition-colors duration-300 border border-white/30 rounded-lg hover:border-white/50 hover:bg-white/10"
+              >
+                Login
+              </button>
+            </div> */}
           </div>
 
           {/* Mobile menu button */}
@@ -170,6 +180,17 @@ const Navbar = () => {
                 </svg>
               </Link>
             ))}
+            
+            {/* Mobile Auth Links - Hidden */}
+            {/* <div className="pt-4 mt-4 border-t border-white/20 space-y-2">
+              <Link
+                to={ROUTES.PUBLIC.LOGIN}
+                className="flex items-center justify-center px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 border border-white/30 text-white/90 hover:text-white hover:border-white/50 hover:bg-white/10"
+                onClick={() => setIsOpen(false)}
+              >
+                Login
+              </Link>
+            </div> */}
           </div>
         </div>
       )}
