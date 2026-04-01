@@ -98,7 +98,13 @@ const Footer = () => {
                 <FaPhone className="mr-3 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
                   <p className="text-gray-300 font-medium">Phone</p>
-                  <p className="text-gray-300 text-sm">(888) 225-6920</p>
+                  <div className="text-gray-300 text-sm space-y-1">
+                    <p><a href="tel:+12068752651" className="hover:text-blue-400 transition-colors">+1 (206) 875-2651</a></p>
+                    <p><a href="tel:+14256202417" className="hover:text-blue-400 transition-colors">+1 (425) 620-2417</a></p>
+                    <p><a href="tel:+12535444781" className="hover:text-blue-400 transition-colors">+1 (253) 544-4781</a></p>
+                    <p><a href="tel:+15092673083" className="hover:text-blue-400 transition-colors">+1 (509) 267-3083</a></p>
+                    <p><a href="tel:+13605836776" className="hover:text-blue-400 transition-colors">+1 (360) 583-6776</a></p>
+                  </div>
                 </div>
               </div>
               

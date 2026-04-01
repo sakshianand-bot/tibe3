@@ -102,10 +102,14 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-1">Give us a call</h3>
-                    <p className="text-gray-500 text-sm mb-1">Mon-Fri from 8am to 3pm.</p>
-                    <a href="tel:888-225-6920" className="text-sky-600 font-semibold hover:text-sky-800 transition-colors">
-                      (888) 225-6920
-                    </a>
+                    <p className="text-gray-500 text-sm mb-2">Mon-Fri from 8am to 3pm.</p>
+                    <div className="space-y-1">
+                      <a href="tel:+12068752651" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (206) 875-2651</a>
+                      <a href="tel:+14256202417" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (425) 620-2417</a>
+                      <a href="tel:+12535444781" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (253) 544-4781</a>
+                      <a href="tel:+15092673083" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (509) 267-3083</a>
+                      <a href="tel:+13605836776" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (360) 583-6776</a>
+                    </div>
                   </div>
                 </div>
 
