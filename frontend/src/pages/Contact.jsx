@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Mail, Phone, MapPin, Clock, MessageCircle, X, CheckCircle, AlertCircle, Loader2, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MapPin, MessageCircle, X, CheckCircle, AlertCircle, Loader2, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../routes/routes.config';
 
@@ -14,10 +14,33 @@ const Contact = () => {
     return () => clearTimeout(timer); // Clean up on component unmount
   }, []);
 
+  // --- LEADCONNECTOR CHAT WIDGET EMBED ---
+  useEffect(() => {
+    // Check if the script is already added to prevent duplicates
+    const existingScript = document.querySelector('script[data-widget-id="6a16bbd71b5a98ef9ddc564e"]');
+    
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = "https://widgets.leadconnectorhq.com/loader.js";
+      script.setAttribute('data-resources-url', "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
+      script.setAttribute('data-widget-id', "6a16bbd71b5a98ef9ddc564e");
+      script.setAttribute('data-source', "WEB_USER");
+      script.async = true;
+
+      document.body.appendChild(script);
+
+      return () => {
+        // Cleanup script when component unmounts to keep your React app performant
+        if (document.body.contains(script)) {
+          document.body.removeChild(script);
+        }
+      };
+    }
+  }, []);
+  // ----------------------------------------
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ success: false, message: '' });
-  const [marketingConsent, setMarketingConsent] = useState(false);
-  const [nonMarketingConsent, setNonMarketingConsent] = useState(false);
   const formRef = useRef(null);
 
   const handleSubmit = async (e) => {
@@ -73,7 +96,7 @@ const Contact = () => {
         
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
           
-          {/* LEFT SIDE: Content & Contact Info (Styled like the timeline/steps in image) */}
+          {/* LEFT SIDE: Content & Contact Info */}
           <div className="lg:col-span-5 space-y-12 lg:sticky lg:top-8">
             <div>
               <div className="inline-flex items-center gap-2 bg-white text-sky-700 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wide mb-6 shadow-sm border border-sky-100">
@@ -98,7 +121,7 @@ const Contact = () => {
                 {/* Item 1: Phone */}
                 <div className="flex gap-6 items-start group">
                   <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-sky-100 flex items-center justify-center text-sky-600 shadow-sm group-hover:border-sky-500 group-hover:bg-sky-50 transition-all duration-300">
-                    <Phone className="w-5 h-5" />
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-gray-900 mb-1">Give us a call</h3>
@@ -231,63 +254,49 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  {/* Consents Section - Full Text Preserved */}
-                  <div className="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <p className="text-sm font-bold text-gray-800 mb-4">Consent to receive text messages:</p>
-                    <div className="space-y-4">
-                      
-                      {/* Marketing Consent */}
-                      <label className="flex items-start gap-3 cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors">
-                        <input
-                          type="checkbox"
-                          checked={marketingConsent}
-                          onChange={(e) => setMarketingConsent(e.target.checked)}
-                          className="mt-1 w-4 h-4 text-sky-600 border-gray-300 rounded focus:ring-sky-500 focus:ring-2"
-                        />
-                        <span className="text-sm text-gray-600">
-                          By checking this box, I agree to receive marketing and promotional text messages from Tiberius Strategies. Messages may be sent up to 4 times per month. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help.
-                          </span>
-                      </label>
-                      
-                      {/* Non-Marketing Consent */}
-                      <label className="flex items-start gap-3 cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors">
-                        <input
-                          type="checkbox"
-                          checked={nonMarketingConsent}
-                          onChange={(e) => setNonMarketingConsent(e.target.checked)}
-                          className="mt-1 w-4 h-4 text-sky-600 border-gray-300 rounded focus:ring-sky-500 focus:ring-2"
-                        />
-                        <span className="text-sm text-gray-600">
-                          By checking this box, I agree to receive non marketing text messages from Tiberius Strategies such as appointment reminders, service updates, and account notifications. Messages may be sent as needed based on my activity or account status. Message and data rates may apply. Reply STOP to unsubscribe.Reply HELP for help.
-                          </span>
-                      </label>
-
-                    </div>
+                  {/* CHAT WIDGET CONTAINER EMBEDDED HERE (BELOW MESSAGE BOX) */}
+                  <div className="lc-chat-widget-placeholder my-4">
+                    {/* The LeadConnector loader will target and render around this area */}
                   </div>
 
                   {/* Links */}
-                  <div className="flex flex-col sm:flex-row gap-3 items-center justify-center text-xs text-gray-500">
+                  <div className="flex flex-col sm:flex-row gap-3 items-center justify-center text-xs text-gray-500 pt-2">
                     <Link to={ROUTES.PUBLIC.PRIVACY_POLICY} className="hover:text-sky-600 underline decoration-gray-300 hover:decoration-sky-600 transition-all">Privacy Policy</Link>
                     <span className="hidden sm:inline">•</span>
                     <Link to={ROUTES.PUBLIC.TERMS_AND_CONDITIONS} className="hover:text-sky-600 underline decoration-gray-300 hover:decoration-sky-600 transition-all">Terms and Conditions</Link>
                   </div>
 
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full bg-gradient-to-r from-sky-600 to-sky-500 text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-sky-200 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
-                  >
-                    {isSubmitting ? (
-                      <>
-                        <Loader2 className="animate-spin mr-2 h-5 w-5" />
-                        Sending...
-                      </>
-                    ) : (
-                      <>
-                        Send Message <ArrowRight className="ml-2 w-5 h-5" />
-                      </>
-                    )}
-                  </button>
+                  {/* BUTTON GROUP */}
+                  <div className="space-y-4">
+                    {/* Primary Form Action: Send Message */}
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full bg-gradient-to-r from-sky-600 to-sky-500 text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-sky-200 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="animate-spin mr-2 h-5 w-5" />
+                          Sending...
+                        </>
+                      ) : (
+                        <>
+                          Send Message <ArrowRight className="ml-2 w-5 h-5" />
+                        </>
+                      )}
+                    </button>
+
+                    {/* Secondary Action: Go to Live Website Button */}
+                    <a
+                      href="https://yourwebsite.com" 
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full bg-gradient-to-r from-sky-600 to-sky-500 text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-sky-200 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center"
+                    >
+                      Live Website <ExternalLink className="ml-2 w-5 h-5" />
+                    </a>
+                  </div>
+
                 </form>
               </div>
             </div>
