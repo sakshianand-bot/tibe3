@@ -49,7 +49,19 @@ const Contact = () => {
     setSubmitStatus({ success: false, message: '' });
 
     const formData = new FormData(e.target);
-    formData.append('access_key', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || '');
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      console.error("Missing VITE_WEB3FORMS_ACCESS_KEY environment variable.");
+      setSubmitStatus({
+        success: false,
+        message: 'Missing Web3Forms key. Add VITE_WEB3FORMS_ACCESS_KEY to your .env and restart the dev server.'
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    formData.append('access_key', accessKey);
     formData.append('from_name', 'Tiberius Strategies Contact Form');
     formData.append('subject', 'New Contact Form Submission');
 
@@ -287,14 +299,7 @@ const Contact = () => {
                     </button>
 
                     {/* Secondary Action: Go to Live Website Button */}
-                    <a
-                      href="https://yourwebsite.com" 
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full bg-gradient-to-r from-sky-600 to-sky-500 text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-sky-200 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center"
-                    >
-                      Live Website <ExternalLink className="ml-2 w-5 h-5" />
-                    </a>
+                    
                   </div>
 
                 </form>

@@ -81,7 +81,19 @@ const Home = () => {
     setSubmitStatus({ success: false, message: '' });
 
     const formData = new FormData(e.target);
-    formData.append('access_key', import.meta.env.VITE_WEB3FORMS_ACCESS_KEY || '');
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    if (!accessKey) {
+      console.error("Missing VITE_WEB3FORMS_ACCESS_KEY environment variable.");
+      setSubmitStatus({
+        success: false,
+        message: 'Missing Web3Forms key. Add VITE_WEB3FORMS_ACCESS_KEY to your .env and restart the dev server.'
+      });
+      setIsSubmitting(false);
+      return;
+    }
+
+    formData.append('access_key', accessKey);
     formData.append('from_name', 'Tiberius Strategies Free Case Review');
     formData.append('subject', 'New Free Case Review Submission');
 
