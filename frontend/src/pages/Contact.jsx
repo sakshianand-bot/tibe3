@@ -5,6 +5,7 @@ import { ROUTES } from '../routes/routes.config';
 
 const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const chatWidgetRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -320,11 +321,7 @@ const Contact = () => {
             >
               <X className="h-4 w-4" />
             </button>
-            <img
-              src="/images/1000073630-removebg-preview.png"
-              alt="Special Offer"
-              className="h-40 w-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
-            />
+            
           </div>
         </div>
       )}

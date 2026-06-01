@@ -4,8 +4,8 @@ import MainLayout from '../layouts/MainLayout';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import ErrorBoundary from '../components/common/ErrorBoundary';
 
-// Lazy Pages
-const Home = lazy(() => import('../pages/Home'));
+// Lazy load page components
+const Home = lazy(() => import('../pages/Homes'));
 const HowItWorks = lazy(() => import('../pages/HowItWorks'));
 const Services = lazy(() => import('../pages/Services'));
 const WhyChooseUs = lazy(() => import('../pages/WhyChooseUs'));

@@ -423,7 +423,6 @@ const HowItWorks = () => {
               <X className="h-4 w-4 text-navy-900" />
             </button>
             <img
-              src="/images/1000073630-removebg-preview.png"
               alt="Special Offer"
               className="h-32 w-auto object-contain drop-shadow-lg"
             />
