@@ -7,14 +7,14 @@ import ErrorBoundary from '../components/common/ErrorBoundary';
 import { ScrollToTop } from '../utils/scrollToTop';
 
 // Lazy load page components
-const Home = lazy(() => import('../pages/Home'));
+const Home = lazy(() => import('../pages/Homes'));
 const HowItWorks = lazy(() => import('../pages/HowItWorks'));
 const Services = lazy(() => import('../pages/Services'));
 const WhyChooseUs = lazy(() => import('../pages/WhyChooseUs'));
 const FAQ = lazy(() => import('../pages/FAQ'));
 const Testimonials = lazy(() => import('../pages/Testimonials'));
 const Resources = lazy(() => import('../pages/Resources'));
-const Contact = lazy(() => import('../pages/Contact'));
+const Contact = lazy(() => import('../pages/Contacts'));
 const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy'));
 const TermsAndConditions = lazy(() => import('../pages/TermsAndConditions'));
 const CookiePolicy = lazy(() => import('../pages/CookiePolicy'));

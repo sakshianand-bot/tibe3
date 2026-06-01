@@ -231,39 +231,7 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  {/* Consents Section - Full Text Preserved */}
-                  <div className="bg-gray-50 p-5 rounded-xl border border-gray-100">
-                    <p className="text-sm font-bold text-gray-800 mb-4">Consent to receive text messages:</p>
-                    <div className="space-y-4">
-                      
-                      {/* Marketing Consent */}
-                      <label className="flex items-start gap-3 cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors">
-                        <input
-                          type="checkbox"
-                          checked={marketingConsent}
-                          onChange={(e) => setMarketingConsent(e.target.checked)}
-                          className="mt-1 w-4 h-4 text-sky-600 border-gray-300 rounded focus:ring-sky-500 focus:ring-2"
-                        />
-                        <span className="text-sm text-gray-600">
-                          By checking this box, I agree to receive marketing and promotional text messages from Tiberius Strategies. Messages may be sent up to 4 times per month. Message and data rates may apply. Reply STOP to unsubscribe. Reply HELP for help.
-                          </span>
-                      </label>
-                      
-                      {/* Non-Marketing Consent */}
-                      <label className="flex items-start gap-3 cursor-pointer hover:bg-gray-100 p-2 rounded transition-colors">
-                        <input
-                          type="checkbox"
-                          checked={nonMarketingConsent}
-                          onChange={(e) => setNonMarketingConsent(e.target.checked)}
-                          className="mt-1 w-4 h-4 text-sky-600 border-gray-300 rounded focus:ring-sky-500 focus:ring-2"
-                        />
-                        <span className="text-sm text-gray-600">
-                          By checking this box, I agree to receive non marketing text messages from Tiberius Strategies such as appointment reminders, service updates, and account notifications. Messages may be sent as needed based on my activity or account status. Message and data rates may apply. Reply STOP to unsubscribe.Reply HELP for help.
-                          </span>
-                      </label>
-
-                    </div>
-                  </div>
+                 
 
                   {/* Links */}
                   <div className="flex flex-col sm:flex-row gap-3 items-center justify-center text-xs text-gray-500">
