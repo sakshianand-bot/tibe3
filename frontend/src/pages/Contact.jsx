@@ -232,17 +232,8 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-1.5">
-                      <label htmlFor="phone" className="text-sm font-semibold text-gray-700 ml-1">Phone Number</label>
-                      <input
-                        type="tel"
-                        id="phone"
-                        name="phone"
-                        className="w-full px-4 py-3 bg-gray-50 rounded-xl border-gray-200 border focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all outline-none"
-                        placeholder=""
-                      />
-                    </div>
+                  <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
+
                     <div className="space-y-1.5">
                       <label htmlFor="address" className="text-sm font-semibold text-gray-700 ml-1">Property Address</label>
                       <input
