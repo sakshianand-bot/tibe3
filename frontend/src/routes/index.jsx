@@ -14,7 +14,7 @@ const WhyChooseUs = lazy(() => import('../pages/WhyChooseUs'));
 const FAQ = lazy(() => import('../pages/FAQ'));
 const Testimonials = lazy(() => import('../pages/Testimonials'));
 const Resources = lazy(() => import('../pages/Resources'));
-const Contact = lazy(() => import('../pages/Contacts'));
+const Contact = lazy(() => import('../pages/Contact'));
 const PrivacyPolicy = lazy(() => import('../pages/PrivacyPolicy'));
 const TermsAndConditions = lazy(() => import('../pages/TermsAndConditions'));
 const CookiePolicy = lazy(() => import('../pages/CookiePolicy'));

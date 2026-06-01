@@ -5,6 +5,7 @@ import { ROUTES } from '../routes/routes.config';
 
 const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const chatWidgetRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -12,6 +13,18 @@ const Contact = () => {
     }, 1000); // Show popup after 1 second
 
     return () => clearTimeout(timer); // Clean up on component unmount
+  }, []);
+
+  // Inject the chat widget script once the ref is mounted
+  useEffect(() => {
+    if (chatWidgetRef.current) {
+      const script = document.createElement('script');
+      script.src = 'https://widgets.leadconnectorhq.com/loader.js';
+      script.setAttribute('data-resources-url', 'https://widgets.leadconnectorhq.com/chat-widget/loader.js');
+      script.setAttribute('data-widget-id', '6a16bbd71b5a98ef9ddc564e');
+      script.setAttribute('data-source', 'WEB_USER');
+      chatWidgetRef.current.appendChild(script);
+    }
   }, []);
 
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -231,7 +244,8 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                 
+                  {/* ── Chat Widget (injected below the message box) ── */}
+                  <div ref={chatWidgetRef} className="w-full" />
 
                   {/* Links */}
                   <div className="flex flex-col sm:flex-row gap-3 items-center justify-center text-xs text-gray-500">
