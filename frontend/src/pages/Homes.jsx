@@ -222,10 +222,7 @@ const Home = () => {
         <div className="fixed bottom-4 right-4 z-50 animate-fade-in-up">
           <div className="relative">
             
-            <img
-              alt="Special Offer"
-              className="h-32 w-auto object-contain drop-shadow-lg"
-            />
+            
           </div>
         </div>
       )}
