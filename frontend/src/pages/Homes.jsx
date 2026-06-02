@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from 'react';
-import { ArrowRight, Phone, X, CreditCard, Shield, FileText, Users, Award, Zap, Clock, DollarSign, Lock, User, ShieldCheck, FileSearch, Wallet, Handshake, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ArrowRight, Phone, X, CreditCard, Shield, FileText, Users, Award, Zap, Clock, DollarSign, Lock, User, ShieldCheck, FileSearch, Wallet, Handshake } from 'lucide-react';
 
 const BenefitCard = ({ icon, title, description, image, details }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,65 +68,8 @@ const BenefitCard = ({ icon, title, description, image, details }) => {
 };
 
 const Home = () => {
-  const [showModal, setShowModal] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [showDunsPopup, setShowDunsPopup] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState({ success: false, message: '' });
-  const formRef = useRef(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ success: false, message: '' });
-
-    const formData = new FormData(e.target);
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
-    if (!accessKey) {
-      console.error("Missing VITE_WEB3FORMS_ACCESS_KEY environment variable.");
-      setSubmitStatus({
-        success: false,
-        message: 'Missing Web3Forms key. Add VITE_WEB3FORMS_ACCESS_KEY to your .env and restart the dev server.'
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    formData.append('access_key', accessKey);
-    formData.append('from_name', 'Tiberius Strategies Free Case Review');
-    formData.append('subject', 'New Free Case Review Submission');
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setSubmitStatus({
-          success: true,
-          message: 'Thank you for your submission! We will review your case and get back to you soon.'
-        });
-        formRef.current?.reset();
-        setTimeout(() => {
-          setSubmitStatus({ success: false, message: '' });
-        }, 3000);
-      } else {
-        throw new Error(data.message || 'Something went wrong');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus({
-        success: false,
-        message: 'Failed to submit your request. Please try again later.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -248,101 +191,6 @@ const Home = () => {
         </div>
       )}
       {/* Consultation Modal */}
-      {showModal && (
-        <div
-          className="fixed inset-0 bg-primary/30 backdrop-blur-lg z-50 flex items-center justify-center p-4 animate-fade-in"
-          onClick={() => setShowModal(false)}
-        >
-          <div
-            className="bg-card rounded-2xl max-w-md w-full p-6 relative animate-scale-in"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <button
-              onClick={() => setShowModal(false)}
-              className="absolute top-4 right-4 text-muted-foreground hover:text-foreground transition-colors"
-            >
-              <X className="h-5 w-5" />
-            </button>
-
-            <div className="text-center relative p-6 rounded-2xl bg-white/40 backdrop-blur-sm border border-white/30 shadow-lg -mb-2">
-              <div className="absolute inset-0 bg-white/20 rounded-2xl -z-10" />
-              <div className="w-14 h-14 bg-gradient-to-r from-sky-400 to-sky-500 rounded-full flex items-center justify-center mx-auto mb-3 shadow-lg">
-                <CreditCard className="h-6 w-6 text-secondary-foreground" />
-              </div>
-              <h3 className="text-xl font-bold text-sky-800 mb-1">
-                Free Case Review
-              </h3>
-              <p className="text-sky-600 text-sm font-medium">
-                Find out if you're owed surplus funds
-              </p>
-            </div>
-
-            <div className="relative p-8 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 shadow-lg mt-6">
-              <div className="absolute inset-0 bg-white/20 rounded-2xl -z-10" />
-              {submitStatus.message && (
-                <div className={`p-4 mb-4 rounded-lg ${submitStatus.success ? 'bg-green-50 text-green-800' : 'bg-red-50 text-red-800'}`}>
-                  <div className="flex items-start">
-                    {submitStatus.success ? (
-                      <CheckCircle className="w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
-                    ) : (
-                      <AlertCircle className="w-5 h-5 mt-0.5 mr-2 flex-shrink-0" />
-                    )}
-                    <span>{submitStatus.message}</span>
-                  </div>
-                </div>
-              )}
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-4">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Full Name"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-white/50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
-                />
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-white/50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
-                />
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="Phone Number"
-                  required
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-white/50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
-                />
-                <input
-                  type="text"
-                  name="property_address"
-                  placeholder="Property Address (if known)"
-                  className="w-full px-4 py-3 rounded-lg border border-input bg-white/50 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
-                />
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-sky-500/90 to-sky-600/90 backdrop-blur-sm text-white font-semibold py-3 px-6 rounded-xl hover:shadow-lg transition-all hover:from-sky-600/90 hover:to-sky-700/90 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center"
-                >
-                  {isSubmitting ? (
-                    <>
-                      <Loader2 className="animate-spin mr-2 h-5 w-5" />
-                      Submitting...
-                    </>
-                  ) : (
-                    'Submit for Free Review'
-                  )}
-                </button>
-              </form>
-            </div>
-
-            <p className="text-xs text-muted-foreground text-center mt-6">
-              By submitting, you agree to our Terms and Privacy Policy
-            </p>
-          </div>
-        </div>
-      )}
-
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-start overflow-hidden bg-navy-900 pt-4">
         {/* Video Background */}
@@ -492,13 +340,6 @@ const Home = () => {
 
             {/* Bottom CTA */}
             <div className="text-center mt-12">
-              <button
-                onClick={() => setShowModal(true)}
-                className="bg-gradient-to-r from-accent to-gold-600 text-accent-foreground font-bold py-4 px-8 rounded-xl hover:shadow-2xl flex items-center justify-center space-x-3 mx-auto transition-all duration-300 shadow-lg hover:scale-105 active:scale-95"
-              >
-                <span className="text-lg">Start Your Free Review</span>
-                <ArrowRight className="h-5 w-5" />
-              </button>
               <p className="text-muted-foreground text-sm mt-4">
                 No obligation • 100% confidential • Get results in days
               </p>
