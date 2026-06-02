@@ -220,16 +220,16 @@ const Home = () => {
       {/* Popup Image */}
       {showPopup && (
         <div className="fixed bottom-4 right-4 z-50 animate-fade-in-up">
-          <div className="relative">
+          <div className="relative bg-white/90 rounded-3xl p-4 shadow-2xl border border-slate-200">
             <button
               onClick={() => setShowPopup(false)}
-              className="absolute -top-2 -right-2 bg-white text-navy-900 rounded-full w-6 h-6 flex items-center justify-center z-10 hover:bg-gray-100 transition-colors shadow-md"
-              aria-label="Close popup"
+              aria-label="Close special offer"
+              className="absolute top-3 right-3 rounded-full bg-slate-100 p-2 text-slate-700 shadow hover:bg-slate-200"
             >
-              <X className="h-4 w-4 text-navy-900" />
+              <X className="h-4 w-4" />
             </button>
             <img
-            
+              src="/images/1000073630-removebg-preview.png"
               alt="Special Offer"
               className="h-32 w-auto object-contain drop-shadow-lg"
             />

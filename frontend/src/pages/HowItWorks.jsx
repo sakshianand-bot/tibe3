@@ -21,7 +21,8 @@ import {
   Scale,
   Banknote,
   Target,
-  X
+  X,
+  AlertTriangle
 } from 'lucide-react';
 
 // Helper component for alert triangle icon
@@ -412,11 +413,7 @@ const HowItWorks = () => {
         <div className="fixed bottom-4 right-4 z-50 animate-fade-in-up">
           <div className="relative">
             
-            <img
-              src="/images/1000073630-removebg-preview.png"
-              alt="Special Offer"
-              className="h-32 w-auto object-contain drop-shadow-lg"
-            />
+        
           </div>
         </div>
       )}

@@ -1,11 +1,10 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Mail, Phone, MapPin, MessageCircle, X, CheckCircle, AlertCircle, Loader2, ArrowRight, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../routes/routes.config';
 
 const Contact = () => {
   const [showPopup, setShowPopup] = useState(false);
-  const chatWidgetRef = useRef(null);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -14,93 +13,6 @@ const Contact = () => {
 
     return () => clearTimeout(timer); // Clean up on component unmount
   }, []);
-
-  // --- LEADCONNECTOR CHAT WIDGET EMBED ---
-  useEffect(() => {
-    // Check if the script is already added to prevent duplicates
-    const existingScript = document.querySelector('script[data-widget-id="6a16bbd71b5a98ef9ddc564e"]');
-    
-    if (!existingScript) {
-      const script = document.createElement('script');
-      script.src = "https://widgets.leadconnectorhq.com/loader.js";
-      script.setAttribute('data-resources-url', "https://widgets.leadconnectorhq.com/chat-widget/loader.js");
-      script.setAttribute('data-widget-id', "6a16bbd71b5a98ef9ddc564e");
-      script.setAttribute('data-source', "WEB_USER");
-      script.async = true;
-
-      document.body.appendChild(script);
-
-      return () => {
-        // Cleanup script when component unmounts to keep your React app performant
-        if (document.body.contains(script)) {
-          document.body.removeChild(script);
-        }
-      };
-    }
-  }, []);
-  // ----------------------------------------
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState({ success: false, message: '' });
-  const formRef = useRef(null);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ success: false, message: '' });
-
-    const formData = new FormData(e.target);
-    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
-    if (!accessKey) {
-      console.error("Missing VITE_WEB3FORMS_ACCESS_KEY environment variable.");
-      setSubmitStatus({
-        success: false,
-        message: 'Missing Web3Forms key. Add VITE_WEB3FORMS_ACCESS_KEY to your .env and restart the dev server.'
-      });
-      setIsSubmitting(false);
-      return;
-    }
-
-    formData.append('access_key', accessKey);
-    formData.append('from_name', 'Tiberius Strategies Contact Form');
-    formData.append('subject', 'New Contact Form Submission');
-
-    try {
-      const response = await fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData,
-      });
-
-      const data = await response.json();
-
-      if (data.success) {
-        setSubmitStatus({
-          success: true,
-          message: 'Thank you for your message! We will get back to you soon.'
-        });
-        formRef.current.reset();
-        // Clear the success message after 2 seconds
-        setTimeout(() => {
-          setSubmitStatus({ success: false, message: '' });
-        }, 2000);
-      } else {
-        throw new Error(data.message || 'Something went wrong');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-      setSubmitStatus({
-        success: false,
-        message: 'Failed to send message. Please try again later.'
-      });
-      // Clear the error message after 2 seconds
-      setTimeout(() => {
-        setSubmitStatus({ success: false, message: '' });
-      }, 2000);
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
   return (
     <div className="min-h-screen bg-sky-50 font-sans">
@@ -193,18 +105,20 @@ const Contact = () => {
       </div>
       </div>
 
-      {/* Popup Image */}
+      {/* Floating Helper Popup */}
       {showPopup && (
         <div className="fixed bottom-6 right-6 z-50 animate-fade-in-up">
-          <div className="relative group">
+          <div className="relative bg-white rounded-3xl p-4 shadow-2xl border border-slate-200 max-w-xs">
             <button
               onClick={() => setShowPopup(false)}
-              className="absolute -top-3 -right-3 bg-white text-gray-800 rounded-full w-8 h-8 flex items-center justify-center z-10 hover:bg-red-50 hover:text-red-500 transition-colors shadow-lg border border-gray-100"
-              aria-label="Close popup"
+              className="absolute top-3 right-3 rounded-full bg-slate-100 p-2 text-slate-600 hover:bg-slate-200"
+              aria-label="Close help popup"
             >
               <X className="h-4 w-4" />
             </button>
-            
+            <div className="text-sm text-gray-700">
+              Need help? Our chat widget is available on every page now — just click the chat icon to start.
+            </div>
           </div>
         </div>
       )}
