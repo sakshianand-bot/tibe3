@@ -25,11 +25,7 @@ import {
 } from 'lucide-react';
 
 // Helper component for alert triangle icon
-const AlertTriangle = ({ className }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.998-.833-2.732 0L4.342 16.5c-.77.833.192 2.5 1.732 2.5z" />
-  </svg>
-);
+
 
 const HowItWorks = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -415,14 +411,9 @@ const HowItWorks = () => {
       {showPopup && (
         <div className="fixed bottom-4 right-4 z-50 animate-fade-in-up">
           <div className="relative">
-            <button
-              onClick={() => setShowPopup(false)}
-              className="absolute -top-2 -right-2 bg-white text-navy-900 rounded-full w-6 h-6 flex items-center justify-center z-10 hover:bg-gray-100 transition-colors shadow-md"
-              aria-label="Close popup"
-            >
-              <X className="h-4 w-4 text-navy-900" />
-            </button>
+            
             <img
+              src="/images/1000073630-removebg-preview.png"
               alt="Special Offer"
               className="h-32 w-auto object-contain drop-shadow-lg"
             />

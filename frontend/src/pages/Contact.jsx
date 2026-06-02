@@ -131,25 +131,7 @@ const Contact = () => {
               <div className="absolute left-6 top-4 bottom-4 w-0.5 bg-gradient-to-b from-sky-200 to-transparent"></div>
 
               <div className="space-y-10 relative">
-                {/* Item 1: Phone */}
-                <div className="flex gap-6 items-start group">
-                  <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-sky-100 flex items-center justify-center text-sky-600 shadow-sm group-hover:border-sky-500 group-hover:bg-sky-50 transition-all duration-300">
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-gray-900 mb-1">Give us a call</h3>
-                    <p className="text-gray-500 text-sm mb-2">Mon-Fri from 8am to 3pm.</p>
-                    <div className="space-y-1">
-                      <a href="tel:+12068752651" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (206) 875-2651</a>
-                      <a href="tel:+14256202417" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (425) 620-2417</a>
-                      <a href="tel:+12535444781" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (253) 544-4781</a>
-                      <a href="tel:+15092673083" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (509) 267-3083</a>
-                      <a href="tel:+13605836776" className="block text-sky-600 font-semibold hover:text-sky-800 transition-colors">+1 (360) 583-6776</a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Item 2: Email */}
+                {/* Item 1: Email */}
                 <div className="flex gap-6 items-start group">
                   <div className="relative z-10 flex-shrink-0 w-12 h-12 rounded-full bg-white border-2 border-sky-100 flex items-center justify-center text-sky-600 shadow-sm group-hover:border-sky-500 group-hover:bg-sky-50 transition-all duration-300">
                     <Mail className="w-5 h-5" />
@@ -178,127 +160,37 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* RIGHT SIDE: The Form Card */}
+{/* RIGHT SIDE: Phone Contact Card */ }
           <div className="lg:col-span-7">
-            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-sky-100">
-              
-              {/* Header inside card */}
-              <div className="bg-sky-50/50 p-8 pb-0">
-                <div className="bg-sky-600 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-4 shadow-lg shadow-sky-200">
-                  <MessageCircle className="w-6 h-6" />
+            <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-sky-100 p-8">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="bg-sky-600 w-12 h-12 rounded-xl flex items-center justify-center text-white shadow-lg shadow-sky-200">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900">Send us a message</h2>
-                <p className="text-gray-500 mt-2">Write us a few words about your project and we'll prepare a proposal for you within <span className="font-semibold text-gray-900">24 hours</span>.</p>
+                <span className="text-xs font-semibold uppercase tracking-widest text-sky-600">Give us a call</span>
               </div>
-
-              <div className="p-8">
-                {submitStatus.message && (
-                  <div className={`p-4 mb-6 rounded-lg flex items-start gap-3 ${submitStatus.success ? 'bg-green-50 text-green-800 border border-green-100' : 'bg-red-50 text-red-800 border border-red-100'}`}>
-                    {submitStatus.success ? (
-                      <CheckCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                    ) : (
-                      <AlertCircle className="w-5 h-5 mt-0.5 flex-shrink-0" />
-                    )}
-                    <span className="text-sm font-medium">{submitStatus.message}</span>
-                  </div>
-                )}
-
-                <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                  
-                  {/* Grid for Name/Email */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-1.5">
-                      <label htmlFor="name" className="text-sm font-semibold text-gray-700 ml-1">Full Name</label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full px-4 py-3 bg-gray-50 rounded-xl border-gray-200 border focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all outline-none"
-                        placeholder=""
-                      />
-                    </div>
-
-                    <div className="space-y-1.5">
-                      <label htmlFor="email" className="text-sm font-semibold text-gray-700 ml-1">Email Address</label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 bg-gray-50 rounded-xl border-gray-200 border focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all outline-none"
-                        placeholder=""
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-1 gap-6">
-
-                    <div className="space-y-1.5">
-                      <label htmlFor="address" className="text-sm font-semibold text-gray-700 ml-1">Property Address</label>
-                      <input
-                        type="text"
-                        id="address"
-                        name="address"
-                        className="w-full px-4 py-3 bg-gray-50 rounded-xl border-gray-200 border focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all outline-none"
-                        placeholder=""
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label htmlFor="message" className="text-sm font-semibold text-gray-700 ml-1">Your Message</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows="4"
-                      required
-                      className="w-full px-4 py-3 bg-gray-50 rounded-xl border-gray-200 border focus:bg-white focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500 transition-all outline-none resize-none"
-                      placeholder=""
-                    ></textarea>
-                  </div>
-
-                  {/* CHAT WIDGET CONTAINER EMBEDDED HERE (BELOW MESSAGE BOX) */}
-                  <div className="lc-chat-widget-placeholder my-4">
-                    {/* The LeadConnector loader will target and render around this area */}
-                  </div>
-
-                  {/* Links */}
-                  <div className="flex flex-col sm:flex-row gap-3 items-center justify-center text-xs text-gray-500 pt-2">
-                    <Link to={ROUTES.PUBLIC.PRIVACY_POLICY} className="hover:text-sky-600 underline decoration-gray-300 hover:decoration-sky-600 transition-all">Privacy Policy</Link>
-                    <span className="hidden sm:inline">•</span>
-                    <Link to={ROUTES.PUBLIC.TERMS_AND_CONDITIONS} className="hover:text-sky-600 underline decoration-gray-300 hover:decoration-sky-600 transition-all">Terms and Conditions</Link>
-                  </div>
-
-                  {/* BUTTON GROUP */}
-                  <div className="space-y-4">
-                    {/* Primary Form Action: Send Message */}
-                    <button
-                      type="submit"
-                      disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-sky-600 to-sky-500 text-white font-bold py-4 px-6 rounded-xl hover:shadow-lg hover:shadow-sky-200 transform hover:-translate-y-0.5 transition-all duration-300 flex items-center justify-center disabled:opacity-60 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-none"
-                    >
-                      {isSubmitting ? (
-                        <>
-                          <Loader2 className="animate-spin mr-2 h-5 w-5" />
-                          Sending...
-                        </>
-                      ) : (
-                        <>
-                          Send Message <ArrowRight className="ml-2 w-5 h-5" />
-                        </>
-                      )}
-                    </button>
-
-                    {/* Secondary Action: Go to Live Website Button */}
-                    
-                  </div>
-
-                </form>
+              <h2 className="text-3xl font-bold text-gray-900 mb-3">Need help right now?</h2>
+              <p className="text-gray-600 mb-6">Our team is available Monday through Friday from 8am to 3pm. Pick the best number below and speak with us directly.</p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <a href="tel:+12068752651" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition">
+                  +1 (206) 875-2651
+                </a>
+                <a href="tel:+14256202417" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition">
+                  +1 (425) 620-2417
+                </a>
+                <a href="tel:+12535444781" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition">
+                  +1 (253) 544-4781
+                </a>
+                <a href="tel:+15092673083" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition">
+                  +1 (509) 267-3083
+                </a>
+                <a href="tel:+13605836776" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition col-span-full">
+                  +1 (360) 583-6776
+                </a>
               </div>
             </div>
           </div>
-        </div>
+      </div>
       </div>
 
       {/* Popup Image */}

@@ -229,6 +229,7 @@ const Home = () => {
               <X className="h-4 w-4 text-navy-900" />
             </button>
             <img
+            
               alt="Special Offer"
               className="h-32 w-auto object-contain drop-shadow-lg"
             />
