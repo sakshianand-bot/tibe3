@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, Phone, X, CreditCard, Shield, FileText, Users, Award, Zap, Clock, DollarSign, Lock, User, ShieldCheck, FileSearch, Wallet, Handshake } from 'lucide-react';
+import BookConsultation from './BookConsultation';
 
 const BenefitCard = ({ icon, title, description, image, details }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -70,6 +71,7 @@ const BenefitCard = ({ icon, title, description, image, details }) => {
 const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [showDunsPopup, setShowDunsPopup] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -231,14 +233,13 @@ const Home = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mb-6 justify-center items-center">
-                {/* Check Eligibility Now Button - Hidden */}
-                {/* <button
-                  onClick={() => setShowModal(true)}
+                <button
+                  onClick={() => setIsModalOpen(true)}
                   className="bg-gradient-to-r from-blue-900 to-blue-950 hover:from-blue-800 hover:to-blue-900 text-white font-semibold py-4 px-8 rounded-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 group"
                 >
-                  <span className="text-lg">Check Eligibility Now</span>
+                  <span className="text-lg">Book Consultation</span>
                   <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </button> */}
+                </button>
                 <a
                   href="tel:1-800-399-0132"
                   className="bg-gradient-to-r from-blue-600/70 via-blue-700/70 to-blue-800/70 hover:from-blue-500/70 hover:to-blue-700/70 text-white font-semibold py-4 px-8 rounded-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center gap-2 group relative overflow-hidden"
@@ -584,6 +585,12 @@ const Home = () => {
           </div>
         </div>
       </section>
+      
+      {/* Book Consultation Modal */}
+      <BookConsultation 
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </div>
   );
 };

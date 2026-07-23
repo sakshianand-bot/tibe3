@@ -1,5 +1,8 @@
 import React, { memo, useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
+import { ROUTES } from '../routes/routes.config';
+import BookConsultation from './BookConsultation';
 
 // Move static data outside the component
 const SERVICES = [
@@ -89,47 +92,21 @@ const PROCESS_STEPS = [
 const gradientText = "bg-gradient-to-r from-sky-600 to-sky-800 bg-clip-text text-transparent";
 const commonButtonStyles = "font-semibold py-3 px-8 rounded-full transition-colors duration-300 text-lg";
 
-const ServiceCard = memo(({ service }) => {
-  const [isVisible, setIsVisible] = useState(false);
-  const cardRef = useRef(null);
-  
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.1, rootMargin: '100px 0px' }
-    );
-
-    if (cardRef.current) {
-      observer.observe(cardRef.current);
-    }
-
-    return () => {
-      if (cardRef.current) {
-        observer.unobserve(cardRef.current);
-      }
-    };
-  }, []);
-
+const ServiceCard = memo(({ service, isVisible }) => {
   const { title, backgroundImage, icon, features, isSearchCard, description } = service;
   const isEvaluation = title === 'Free Case Evaluation';
   const bgImage = backgroundImage || icon;
 
   return (
     <article 
-      ref={cardRef}
-      className={`relative rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group h-full flex flex-col will-change-transform backface-visible -webkit-backface-visible transform-gpu ${
+      className={`relative rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group h-full flex flex-col ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}
       style={{ transition: 'opacity 0.5s ease, transform 0.5s ease' }}
       aria-label={title}
     >
       <div 
-        className={`absolute inset-0 bg-cover bg-center transition-all duration-700 group-hover:scale-105 ${
+        className={`absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105 ${
           isEvaluation ? 'brightness-80 contrast-120 scale-105' : 'brightness-90 contrast-110'
         }`}
         style={{ backgroundImage: `url(${bgImage})` }}
@@ -222,6 +199,8 @@ const Services = memo(function Services() {
     process: false,
     cta: false
   });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   const servicesRef = useRef(null);
   const processRef = useRef(null);
@@ -274,6 +253,14 @@ const Services = memo(function Services() {
     window.location.href = '/case-studies';
   };
 
+  const handleBookConsultation = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-sky-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
@@ -296,7 +283,7 @@ const Services = memo(function Services() {
           aria-label="Our services"
         >
           {SERVICES.map((service) => (
-            <ServiceCard key={service.title} service={service} />
+            <ServiceCard key={service.title} service={service} isVisible={isVisible.services} />
           ))}
         </div>
 
@@ -334,11 +321,20 @@ const Services = memo(function Services() {
             </div>
           </div>
           
-          <p className="text-xl text-sky-600 mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-sky-600 mb-6 max-w-2xl mx-auto">
             Our success is tied to yours. We only get paid when you recover your funds.
           </p>
           
-          <p className="mt-8 text-gray-500 text-sm">
+          <div className="flex justify-center mb-8">
+            <button
+              onClick={handleBookConsultation}
+              className="bg-gradient-to-r from-sky-600 to-sky-700 text-white font-bold py-4 px-12 rounded-full hover:from-sky-700 hover:to-sky-800 transition-all duration-300 shadow-lg text-lg"
+            >
+              Book Consultation
+            </button>
+          </div>
+          
+          <p className="text-gray-500 text-sm">
             *Client responsible for court filing fees in some jurisdictions. We never charge upfront fees for our recovery services.
           </p>
           
@@ -346,6 +342,12 @@ const Services = memo(function Services() {
           <div className="mt-16 h-2 bg-gradient-to-r from-sky-900 via-sky-800 to-sky-900 rounded-full"></div>
         </div>
       </div>
+      
+      {/* Book Consultation Modal */}
+      <BookConsultation 
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </div>
   );
 });

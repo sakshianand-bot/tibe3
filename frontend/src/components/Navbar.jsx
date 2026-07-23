@@ -32,8 +32,9 @@ const Navbar = () => {
     { name: 'Privacy Policy', path: ROUTES.PUBLIC.PRIVACY_POLICY },
     { name: 'Terms & Conditions', path: ROUTES.PUBLIC.TERMS_AND_CONDITIONS },
     { name: 'FAQ', path: ROUTES.PUBLIC.FAQ },
+    { name: 'Book Consultation', path: ROUTES.PUBLIC.BOOKCONSULTATION },
     { name: 'Testimonials', path: ROUTES.PUBLIC.TESTIMONIALS },
-    { name: 'Contact Us', path: ROUTES.PUBLIC.CONTACT }
+    { name: 'Contact', path: ROUTES.PUBLIC.CONTACT }
   ];
 
   const navStyles = {
@@ -88,12 +89,12 @@ const Navbar = () => {
           </div>
           
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
+          <div className="hidden md:flex items-center space-x-0.5">
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => handleNavigation(link.path)}
-                className="relative px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 group bg-transparent border-none cursor-pointer"
+                className="relative px-3 py-2 rounded text-sm font-medium transition-all duration-300 group bg-transparent border-none cursor-pointer whitespace-nowrap"
                 style={linkHoverStyles}
               >
                 <span className="text-white/85 group-hover:text-white transition-colors duration-300">
