@@ -10,6 +10,7 @@ const HowItWorks = lazy(() => import('../pages/HowItWorks'));
 const Services = lazy(() => import('../pages/Services'));
 const WhyChooseUs = lazy(() => import('../pages/WhyChooseUs'));
 const FAQ = lazy(() => import('../pages/FAQ'));
+const BookConsultation = lazy(() => import('../pages/BookConsultation'));
 const Testimonials = lazy(() => import('../pages/Testimonials'));
 const Resources = lazy(() => import('../pages/Resources'));
 const Contact = lazy(() => import('../pages/Contact'));
@@ -19,6 +20,8 @@ const CookiePolicy = lazy(() => import('../pages/CookiePolicy'));
 const Disclaimer = lazy(() => import('../pages/Disclaimer'));
 const Login = lazy(() => import('../pages/Login'));
 const SignUp = lazy(() => import('../pages/SignUp'));
+const Payment = lazy(() => import('../pages/Payment'));
+const ThankYou = lazy(() => import('../pages/ThankYou'));
 
 const LazyPage = ({ Page }) => (
   <Suspense fallback={<LoadingSpinner />}>
@@ -56,6 +59,10 @@ const router = createBrowserRouter([
         element: <LazyPage Page={FAQ} />,
       },
       {
+        path: 'book-consultation',
+        element: <LazyPage Page={BookConsultation} />,
+      },
+      {
         path: 'testimonials',
         element: <LazyPage Page={Testimonials} />,
       },
@@ -90,6 +97,14 @@ const router = createBrowserRouter([
       {
         path: 'sign-up',
         element: <LazyPage Page={SignUp} />,
+      },
+      {
+        path: 'payment',
+        element: <LazyPage Page={Payment} />,
+      },
+      {
+        path: 'thank-you',
+        element: <LazyPage Page={ThankYou} />,
       },
     ],
   },
