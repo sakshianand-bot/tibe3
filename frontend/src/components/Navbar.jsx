@@ -90,7 +90,52 @@ const Navbar = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-0.5">
-            {navLinks.map((link) => (
+            {navLinks.map((link) => {
+              if (link.name === 'Services') {
+                return (
+                  <div key={link.name} className="relative group inline-block">
+                    <button
+                      onClick={() => handleNavigation(link.path)}
+                      className="relative px-3 py-2 rounded text-sm font-medium transition-all duration-300 bg-transparent border-none cursor-pointer whitespace-nowrap"
+                      style={linkHoverStyles}
+                    >
+                      <span className="text-white/85 group-hover:text-white transition-colors duration-300 flex items-center gap-1">
+                        {link.name}
+                        <svg className="w-4 h-4 opacity-70" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                        </svg>
+                      </span>
+                      <span 
+                        className="absolute bottom-0 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300"
+                        style={{
+                          background: 'linear-gradient(to right, #60a5fa, #22d3ee)'
+                        }}
+                      ></span>
+                    </button>
+                    <div className="absolute left-0 mt-2 w-64 rounded-xl shadow-2xl py-2 bg-slate-900 border border-slate-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 translate-y-2 group-hover:translate-y-0">
+                      <button
+                        onClick={() => handleNavigation(ROUTES.PUBLIC.SERVICES)}
+                        className="block px-4 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400 w-full text-left transition-colors"
+                      >
+                        All Services
+                      </button>
+                      <button
+                        onClick={() => handleNavigation(ROUTES.PUBLIC.WHOLESALE_REAL_ESTATE)}
+                        className="block px-4 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400 w-full text-left transition-colors"
+                      >
+                        Wholesale Real Estate
+                      </button>
+                      <button
+                        onClick={() => handleNavigation(ROUTES.PUBLIC.AI_WEB_DEV)}
+                        className="block px-4 py-2.5 text-sm font-medium text-slate-300 hover:bg-slate-800 hover:text-cyan-400 w-full text-left transition-colors"
+                      >
+                        AI Web Development
+                      </button>
+                    </div>
+                  </div>
+                );
+              }
+              return (
               <button
                 key={link.name}
                 onClick={() => handleNavigation(link.path)}
@@ -107,7 +152,7 @@ const Navbar = () => {
                   }}
                 ></span>
               </button>
-            ))}
+            )})}
             
             {/* Auth Buttons - Hidden */}
             {/* <div className="flex items-center space-x-2 ml-4 pl-4 border-l border-white/20">
@@ -150,11 +195,62 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden" style={mobileMenuStyles}>
           <div className="px-2 pt-2 pb-4 space-y-1 sm:px-3">
-            {navLinks.map((link) => (
+            {navLinks.map((link) => {
+              if (link.name === 'Services') {
+                return (
+                  <div key={link.name} className="flex flex-col">
+                    <Link
+                      to={link.path}
+                      className="flex items-center px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:pl-6 group"
+                      style={{
+                        color: 'rgba(255, 255, 255, 0.9)',
+                        backgroundColor: 'transparent'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+                        e.currentTarget.style.color = '#ffffff';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = 'transparent';
+                        e.currentTarget.style.color = 'rgba(255, 255, 255, 0.9)';
+                      }}
+                      onClick={() => setIsOpen(false)}
+                    >
+                      <span className="ml-2">{link.name}</span>
+                      <svg 
+                        className="ml-auto h-4 w-4 transition-opacity duration-300 opacity-0 group-hover:opacity-100" 
+                        fill="none" 
+                        viewBox="0 0 24 24" 
+                        stroke="currentColor"
+                        style={{ color: '#60a5fa' }}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                    <div className="pl-6 flex flex-col space-y-1 mt-1 border-l border-white/10 ml-4">
+                      <Link
+                        to={ROUTES.PUBLIC.WHOLESALE_REAL_ESTATE}
+                        className="px-4 py-2.5 rounded-lg text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 hover:pl-6 transition-all duration-300"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        Wholesale Real Estate
+                      </Link>
+                      <Link
+                        to={ROUTES.PUBLIC.AI_WEB_DEV}
+                        className="px-4 py-2.5 rounded-lg text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 hover:pl-6 transition-all duration-300"
+                        onClick={() => setIsOpen(false)}
+                      >
+                        AI Web Development
+                      </Link>
+                    </div>
+                  </div>
+                );
+              }
+              return (
               <Link
                 key={link.name}
                 to={link.path}
-                className="flex items-center px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:pl-6"
+                className="flex items-center px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:pl-6 group"
                 style={{
                   color: 'rgba(255, 255, 255, 0.9)',
                   backgroundColor: 'transparent'
@@ -180,7 +276,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </Link>
-            ))}
+            )})}
             
             {/* Mobile Auth Links - Hidden */}
             {/* <div className="pt-4 mt-4 border-t border-white/20 space-y-2">

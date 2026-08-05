@@ -16,7 +16,9 @@ export const ROUTES = {
     LOGIN: '/login',
     SIGN_UP: '/sign-up',
     PAYMENT: '/payment',
-    THANK_YOU: '/thank-you'
+    THANK_YOU: '/thank-you',
+    WHOLESALE_REAL_ESTATE: '/services/wholesale-real-estate',
+    AI_WEB_DEV: '/services/ai-website-development'
   },
   ADMIN: {
     LOGIN: '/admin/login',

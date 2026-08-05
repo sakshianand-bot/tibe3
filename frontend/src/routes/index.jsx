@@ -22,6 +22,8 @@ const Login = lazy(() => import('../pages/Login'));
 const SignUp = lazy(() => import('../pages/SignUp'));
 const Payment = lazy(() => import('../pages/Payment'));
 const ThankYou = lazy(() => import('../pages/ThankYou'));
+const WholesaleRealEstate = lazy(() => import('../pages/WholesaleRealEstate'));
+const AIWebDevelopment = lazy(() => import('../pages/AIWebDevelopment'));
 
 const LazyPage = ({ Page }) => (
   <Suspense fallback={<LoadingSpinner />}>
@@ -105,6 +107,14 @@ const router = createBrowserRouter([
       {
         path: 'thank-you',
         element: <LazyPage Page={ThankYou} />,
+      },
+      {
+        path: 'services/wholesale-real-estate',
+        element: <LazyPage Page={WholesaleRealEstate} />,
+      },
+      {
+        path: 'services/ai-website-development',
+        element: <LazyPage Page={AIWebDevelopment} />,
       },
     ],
   },
