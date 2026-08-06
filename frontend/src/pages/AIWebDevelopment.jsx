@@ -48,7 +48,7 @@ export default function AIDigitalMarketing() {
       name: "Sarah Jenkins",
       role: "CMO at FutureFlow Tech",
       quote:
-        "Synergy Tech fundamentally transformed our customer acquisition engine. Their AI GEO strategy increased our organic LLM citations and traffic by 240% in just six months.",
+        "Tiberius Strategies fundamentally transformed our customer acquisition engine. Their AI GEO strategy increased our organic LLM citations and traffic by 240% in just six months.",
       metric: "240%",
       metricLabel: "Organic Traffic Lift",
       stars: 5
@@ -77,7 +77,7 @@ export default function AIDigitalMarketing() {
     <div className="bg-[#040816] text-[#FFFFFF] font-['Inter',sans-serif] min-h-screen overflow-x-hidden selection:bg-[#38BDF8]/20 selection:text-[#38BDF8]">
       <main className="pt-12">
         {/* ===================================================================
-            1. HERO SECTION (With Image replacing Synergy_OS Dashboard Content)
+            1. HERO SECTION
         =================================================================== */}
         <section className="relative min-h-[90vh] flex items-center px-6 md:px-16 lg:px-24 pt-12 pb-20 overflow-hidden bg-gradient-to-b from-[#040816] via-[#0B1220] to-[#040816]">
           {/* Ambient Glow Effects */}
@@ -128,10 +128,10 @@ export default function AIDigitalMarketing() {
                 className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-10"
               >
                 <button className="px-8 py-4 bg-[#2563EB] text-white rounded-xl text-sm font-semibold hover:bg-blue-600 transition-all shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 group">
-                  Claim Free AI Audit <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Schedule a Free Consultation <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button className="px-8 py-4 bg-[#0B1220] text-[#FFFFFF] border border-[#2563EB]/30 rounded-xl text-sm font-semibold hover:bg-[#111827] transition-all flex items-center justify-center gap-2">
-                  Explore Interactive Platform
+                  Request a Quote
                 </button>
               </motion.div>
 
@@ -152,7 +152,7 @@ export default function AIDigitalMarketing() {
               </motion.div>
             </motion.div>
 
-            {/* Right 40% - Image Dashboard Mockup in place of text */}
+            {/* Right 40% - Image Dashboard Mockup */}
             <motion.div
               className="lg:col-span-6 relative"
               initial={{ opacity: 0, scale: 0.95 }}
@@ -166,23 +166,21 @@ export default function AIDigitalMarketing() {
                     <div className="w-3 h-3 rounded-full bg-red-500/80" />
                     <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                     <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                    <span className="ml-2 text-xs font-mono text-[#94A3B8]">Synergy_OS // Marketing_Intelligence</span>
+                    <span className="ml-2 text-xs font-mono text-[#94A3B8]">Tiberius_Strategies // Marketing_Intelligence</span>
                   </div>
                   <span className="px-2.5 py-1 rounded-full bg-[#22C55E]/10 border border-[#22C55E]/30 text-[#22C55E] text-[10px] font-bold tracking-wider uppercase flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" /> Live Feed
                   </span>
                 </div>
 
-                {/* IMAGE IN PLACE OF SYNERGY_OS DASHBOARD CONTENT */}
                 <div className="rounded-xl overflow-hidden border border-slate-800 relative group aspect-[16/10] bg-slate-950">
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
-                    alt="Synergy OS Marketing Intelligence Dashboard"
+                    alt="Tiberius Strategies Marketing Intelligence Dashboard"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-transparent"></div>
 
-                  {/* Overlay Badge */}
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between p-3 rounded-xl bg-[#0B1220]/90 backdrop-blur-md border border-slate-700/80">
                     <div>
                       <div className="text-[10px] text-[#94A3B8] font-mono">ORGANIC TRAFFIC LIFT</div>
@@ -257,12 +255,12 @@ export default function AIDigitalMarketing() {
             {/* Radial Nodes Grid */}
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 sm:gap-12 mt-12 w-full relative z-10">
               {[
-                { title: "AI SEO & GEO", icon: Search, desc: "Ranking in LLM zero-click search" },
-                { title: "Predictive CRM", icon: Database, desc: "Automated pipeline deal scoring" },
-                { title: "Programmatic Ads", icon: Target, desc: "Real-time algorithmic bidding" },
-                { title: "Generative Email", icon: Mail, desc: "1-to-1 dynamic personalized messaging" },
-                { title: "Attribution Analytics", icon: BarChart3, desc: "Multi-touch revenue modeling" },
-                { title: "Social Automation", icon: Share2, desc: "Autonomous content generation" }
+                { title: "AI Search Optimization", icon: Search, desc: "SEO & GEO across ChatGPT, Copilot, Gemini & Perplexity" },
+                { title: "CRM Automation", icon: Database, desc: "Seamless pipeline and workflow integration" },
+                { title: "Performance Marketing", icon: Target, desc: "Google Ads, Microsoft Ads, Meta Ads & LinkedIn Ads" },
+                { title: "Email Marketing", icon: Mail, desc: "AI-driven targeted campaign workflows" },
+                { title: "Analytics & Reporting", icon: BarChart3, desc: "Real-time metrics and data integration" },
+                { title: "Social & AI Assistants", icon: Share2, desc: "AI Content Creation & Interactive Chat Assistants" }
               ].map((node, i) => (
                 <motion.div
                   key={i}
@@ -281,28 +279,28 @@ export default function AIDigitalMarketing() {
         </section>
 
         {/* ===================================================================
-            4. SERVICES SHOWCASE (With Image Cards for AI Citation & Content Output)
+            4. SERVICES SHOWCASE
         =================================================================== */}
         <section className="py-24 px-6 md:px-16 max-w-[1280px] mx-auto space-y-24">
           {/* Service 1 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 space-y-6">
-              <span className="text-xs font-mono font-bold text-[#38BDF8] uppercase tracking-wider">01 / GEO & LLM Optimization</span>
+              <span className="text-xs font-mono font-bold text-[#38BDF8] uppercase tracking-wider">01 / AI Search Optimization (SEO & GEO)</span>
               <h3 className="text-3xl font-bold">Generative Engine Search Dominance</h3>
               <p className="text-[#94A3B8] leading-relaxed">
-                Traditional SEO isn't enough. We optimize your digital presence so generative AI engines (ChatGPT, Perplexity, Gemini) cite your business as the primary solution.
+                Optimize your digital presence so modern AI search tools and LLMs recognize and cite your business as the premier authority in your field.
               </p>
               <ul className="space-y-3 font-medium text-sm text-[#94A3B8]">
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Vector Database Indexing & Citation Optimization</li>
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> LLM Brand Mention Tracking</li>
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Schema & Structured Knowledge Graph Architecture</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Google AI Overviews Optimization</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> ChatGPT & Gemini Optimization</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Microsoft Copilot & Perplexity Optimization</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Local SEO & Google Business Profile Optimization</li>
               </ul>
               <button className="pt-2 text-[#38BDF8] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
                 EXPLORE GEO STRATEGIES <ArrowRight className="w-4 h-4" />
               </button>
             </div>
 
-            {/* IMAGE CARD IN PLACE OF "AI Citation Analytics" */}
             <div className="lg:col-span-6 bg-[#0B1220] border border-slate-800 rounded-2xl aspect-[4/3] relative overflow-hidden group shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
@@ -311,7 +309,6 @@ export default function AIDigitalMarketing() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-black/30"></div>
 
-              {/* Overlay Label */}
               <div className="absolute inset-0 p-5 flex flex-col justify-between pointer-events-none">
                 <div className="flex justify-between items-center">
                   <span className="px-3 py-1 rounded-md bg-[#2563EB]/90 backdrop-blur-md text-white text-xs font-mono font-bold border border-blue-400/30">
@@ -323,16 +320,15 @@ export default function AIDigitalMarketing() {
                 </div>
 
                 <div className="p-3 bg-[#0B1220]/90 backdrop-blur-md rounded-xl border border-slate-700/80 flex items-center justify-between text-xs">
-                  <span className="text-slate-300 font-medium">Perplexity & ChatGPT Citations</span>
+                  <span className="text-slate-300 font-medium">Perplexity, Gemini & ChatGPT Citations</span>
                   <span className="font-bold text-[#38BDF8]">98.2% Visibility</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Service 2 (Reversed) */}
+          {/* Service 2 */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            {/* IMAGE CARD IN PLACE OF "Content Output Metrics 10x Production Speed" */}
             <div className="lg:col-span-6 order-2 lg:order-1 bg-[#0B1220] border border-slate-800 rounded-2xl aspect-[4/3] relative overflow-hidden group shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80"
@@ -341,72 +337,67 @@ export default function AIDigitalMarketing() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-black/30"></div>
 
-              {/* Overlay Label */}
               <div className="absolute inset-0 p-5 flex flex-col justify-between pointer-events-none">
                 <div className="flex justify-between items-center">
                   <span className="px-3 py-1 rounded-md bg-[#38BDF8]/20 backdrop-blur-md text-[#38BDF8] text-xs font-mono font-bold border border-[#38BDF8]/40">
-                    CONTENT OUTPUT METRICS
+                    AUTOMATION & CONTENT
                   </span>
                   <span className="px-2.5 py-1 rounded-full bg-[#22C55E]/20 text-[#22C55E] text-[10px] font-mono font-bold border border-[#22C55E]/30">
-                    10X PRODUCTION SPEED
+                    FAST DEPLOYMENT
                   </span>
                 </div>
 
                 <div className="p-3 bg-[#0B1220]/90 backdrop-blur-md rounded-xl border border-slate-700/80 flex items-center justify-between text-xs">
-                  <span className="text-slate-300 font-medium">Brand Tone Accuracy</span>
+                  <span className="text-slate-300 font-medium">Brand Communication</span>
                   <span className="font-bold text-[#22C55E]">99.4% Match Rate</span>
                 </div>
               </div>
             </div>
 
             <div className="lg:col-span-6 space-y-6 order-1 lg:order-2">
-              <span className="text-xs font-mono font-bold text-[#38BDF8] uppercase tracking-wider">02 / Content Automation Engine</span>
-              <h3 className="text-3xl font-bold">Autonomous Multi-Channel Content Pipelines</h3>
+              <span className="text-xs font-mono font-bold text-[#38BDF8] uppercase tracking-wider">02 / Performance & Automation Engine</span>
+              <h3 className="text-3xl font-bold">AI Digital Marketing & Paid Media</h3>
               <p className="text-[#94A3B8] leading-relaxed">
-                Scale high-quality articles, ad copy, and social campaigns automatically without sacrificing editorial integrity or brand voice.
+                Deploy targeted ad campaigns and intelligent workflow automations designed to convert qualified traffic into long-term clients.
               </p>
               <ul className="space-y-3 font-medium text-sm text-[#94A3B8]">
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Custom Trained LLM Brand Voice Models</li>
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Automated SEO Content Optimization</li>
-                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Multi-Platform Auto-Publishing Workflows</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Performance Marketing (Google, Microsoft, Meta & LinkedIn Ads)</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> AI Content Creation & Social Media Marketing</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Email Marketing & Marketing Automation</li>
+                <li className="flex items-center gap-3"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> CRM Automation & AI Chat Assistants</li>
               </ul>
               <button className="pt-2 text-[#38BDF8] font-bold text-sm flex items-center gap-2 hover:gap-3 transition-all">
-                SEE CONTENT ENGINE SPECS <ArrowRight className="w-4 h-4" />
+                SEE MARKETING SPECS <ArrowRight className="w-4 h-4" />
               </button>
             </div>
           </div>
         </section>
 
         {/* ===================================================================
-            5. SERVICES & INDUSTRIES (Redesigned Equal-Height Premium Cards)
+            5. SERVICES & INDUSTRIES
         =================================================================== */}
         <section className="py-24 px-6 md:px-16 max-w-[1280px] mx-auto relative">
-          {/* Radial Blue Background Glow & Grid Overlay */}
           <div className="absolute top-0 left-0 w-[500px] h-[500px] bg-[#2563EB]/10 rounded-full blur-[150px] pointer-events-none" />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none" />
 
-          {/* Section Heading */}
           <div className="text-center max-w-2xl mx-auto mb-16 relative z-10">
-            <span className="text-[#38BDF8] text-xs font-bold uppercase tracking-widest mb-3 block">Website Development & AI Marketing</span>
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">AI Website Development & Digital Marketing</h2>
+            <span className="text-[#38BDF8] text-xs font-bold uppercase tracking-widest mb-3 block">Solutions & Market Sectors</span>
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">Website Development & Digital Marketing</h2>
             <p className="text-[#94A3B8] text-base mt-3">
-              We deliver websites and digital marketing that work together to capture leads, improve conversions, and drive measurable growth.
+              We build custom digital platforms and modern AI marketing campaigns that drive engagement across every industry.
             </p>
           </div>
 
-          {/* 3 Equal-Height Premium Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
-            
-            {/* CARD 1: Website Development */}
+
+            {/* CARD 1: Website Development Services */}
             <div className="h-full flex flex-col rounded-[32px] bg-[#0B1220] border border-white/[0.08] shadow-[0_30px_80px_rgba(0,0,0,0.35)] overflow-hidden group hover:-translate-y-2.5 hover:border-[#2563EB] transition-all duration-500 relative">
-              {/* Top Radial Glow */}
               <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#2563EB]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              
-              {/* Illustration (Image 45% height) */}
+
               <div className="h-56 w-full relative overflow-hidden bg-slate-950">
                 <img
                   src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-                  alt="Website Development UI Mockup"
+                  alt="Website Development Services"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-transparent" />
@@ -415,26 +406,30 @@ export default function AIDigitalMarketing() {
                 </div>
               </div>
 
-              {/* Title & Description */}
               <div className="p-6 pb-2">
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">
-                  Website Development
+                  Website Development Services
                 </h3>
                 <p className="text-[#94A3B8] text-sm min-h-[80px] leading-relaxed">
-                  Custom development for modern digital brands with mobile-first, CMS, analytics, and conversion optimization baked in.
+                  High-performance corporate, business, e-commerce, and mobile-first website solutions engineered for conversion and speed.
                 </p>
               </div>
 
-              {/* 2-Column Feature Grid */}
               <div className="p-6 pt-0 flex-1 flex flex-col justify-between">
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {[
                     'Business Websites',
-                    'E-commerce',
+                    'Corporate Websites',
                     'Landing Pages',
-                    'CRM Integration',
+                    'Portfolio Websites',
+                    'E-commerce Websites',
+                    'Website Redesign',
+                    'Website Maintenance',
+                    'Mobile-First Dev',
                     'Speed Optimization',
-                    'Analytics'
+                    'Responsive Design',
+                    'CRM Integration',
+                    'Analytics Integration'
                   ].map((feat, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-xs text-slate-300 font-medium">
                       <div className="w-4 h-4 rounded-full bg-gradient-to-br from-[#2563EB] to-[#38BDF8] flex items-center justify-center shrink-0 shadow-sm">
@@ -445,26 +440,23 @@ export default function AIDigitalMarketing() {
                   ))}
                 </div>
 
-                {/* Bottom CTA Button with Hover Animation */}
                 <div className="pt-4 border-t border-white/[0.08] backdrop-blur-md">
                   <button className="w-full py-3.5 px-5 rounded-2xl bg-[#111827] border border-white/10 group-hover:border-[#2563EB] text-sm font-semibold text-white flex items-center justify-between transition-all">
-                    <span>Explore Service</span>
+                    <span>Explore Development</span>
                     <ArrowRight className="w-4 h-4 text-[#38BDF8] group-hover:translate-x-1.5 transition-transform" />
                   </button>
                 </div>
               </div>
             </div>
 
-            {/* CARD 2: AI Digital Marketing */}
+            {/* CARD 2: AI Digital Marketing Services */}
             <div className="h-full flex flex-col rounded-[32px] bg-[#0B1220] border border-white/[0.08] shadow-[0_30px_80px_rgba(0,0,0,0.35)] overflow-hidden group hover:-translate-y-2.5 hover:border-[#2563EB] transition-all duration-500 relative">
-              {/* Top Radial Glow */}
               <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#2563EB]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-              {/* Illustration (Image 45% height) */}
               <div className="h-56 w-full relative overflow-hidden bg-slate-950">
                 <img
                   src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
-                  alt="AI Marketing Dashboard"
+                  alt="AI Digital Marketing Services"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-transparent" />
@@ -473,26 +465,30 @@ export default function AIDigitalMarketing() {
                 </div>
               </div>
 
-              {/* Title & Description */}
               <div className="p-6 pb-2">
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">
-                  AI Digital Marketing
+                  AI Digital Marketing Services
                 </h3>
                 <p className="text-[#94A3B8] text-sm min-h-[80px] leading-relaxed">
-                  Intelligent marketing services that optimize search, paid media, social, email, and automation with generative AI.
+                  Data-driven AI search optimization, paid performance campaigns, and automated marketing strategies.
                 </p>
               </div>
 
-              {/* 2-Column Feature Grid */}
               <div className="p-6 pt-0 flex-1 flex flex-col justify-between">
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {[
-                    'AI SEO',
-                    'Google Ads',
-                    'GEO',
-                    'ChatGPT Visibility',
-                    'Social Media',
-                    'Automation'
+                    'AI Search (SEO & GEO)',
+                    'Google AI Overviews',
+                    'ChatGPT Optimization',
+                    'Copilot Optimization',
+                    'Gemini Optimization',
+                    'Perplexity SEO',
+                    'Local SEO & GBP',
+                    'Performance Marketing',
+                    'Google & Meta Ads',
+                    'Social Media Marketing',
+                    'AI Content Creation',
+                    'Marketing Automation'
                   ].map((feat, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-xs text-slate-300 font-medium">
                       <div className="w-4 h-4 rounded-full bg-gradient-to-br from-[#2563EB] to-[#38BDF8] flex items-center justify-center shrink-0 shadow-sm">
@@ -503,10 +499,9 @@ export default function AIDigitalMarketing() {
                   ))}
                 </div>
 
-                {/* Bottom CTA Button with Hover Animation */}
                 <div className="pt-4 border-t border-white/[0.08] backdrop-blur-md">
                   <button className="w-full py-3.5 px-5 rounded-2xl bg-[#111827] border border-white/10 group-hover:border-[#2563EB] text-sm font-semibold text-white flex items-center justify-between transition-all">
-                    <span>Explore Service</span>
+                    <span>Explore Marketing</span>
                     <ArrowRight className="w-4 h-4 text-[#38BDF8] group-hover:translate-x-1.5 transition-transform" />
                   </button>
                 </div>
@@ -515,44 +510,44 @@ export default function AIDigitalMarketing() {
 
             {/* CARD 3: Industries We Serve */}
             <div className="h-full flex flex-col rounded-[32px] bg-[#0B1220] border border-white/[0.08] shadow-[0_30px_80px_rgba(0,0,0,0.35)] overflow-hidden group hover:-translate-y-2.5 hover:border-[#2563EB] transition-all duration-500 relative md:col-span-2 lg:col-span-1">
-              {/* Top Radial Glow */}
               <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#2563EB]/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-              {/* Illustration (Image 45% height) */}
               <div className="h-56 w-full relative overflow-hidden bg-slate-950">
                 <img
                   src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
-                  alt="Business Ecosystem"
+                  alt="Industries We Serve"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-transparent" />
                 <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-emerald-500/20 backdrop-blur-md border border-emerald-500/40 text-emerald-400 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
-                  <Building2 className="w-3 h-3" /> Business Ecosystem
+                  <Building2 className="w-3 h-3" /> Industry Coverage
                 </div>
               </div>
 
-              {/* Title & Description */}
               <div className="p-6 pb-2">
                 <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-[#38BDF8] transition-colors">
                   Industries We Serve
                 </h3>
                 <p className="text-[#94A3B8] text-sm min-h-[80px] leading-relaxed">
-                  Our AI website and marketing services are tailored for high-growth leaders across diverse industry domains.
+                  Providing specialized web development and AI marketing solutions across key market verticals.
                 </p>
               </div>
 
-              {/* 2-Column Feature Grid */}
               <div className="p-6 pt-0 flex-1 flex flex-col justify-between">
                 <div className="grid grid-cols-2 gap-3 mb-8">
                   {[
-                    'Professional',
+                    'Professional Services',
                     'Healthcare',
-                    'Real Estate',
                     'Construction',
-                    'Technology',
-                    'Finance',
+                    'Legal',
+                    'Financial Services',
+                    'Real Estate',
+                    'E-commerce',
                     'Education',
-                    'Startups'
+                    'Technology',
+                    'Startups',
+                    'Nonprofits',
+                    'Local Businesses'
                   ].map((ind, idx) => (
                     <div key={idx} className="flex items-center gap-2 text-xs text-slate-300 font-medium">
                       <div className="w-4 h-4 rounded-full bg-gradient-to-br from-[#2563EB] to-[#38BDF8] flex items-center justify-center shrink-0 shadow-sm">
@@ -563,7 +558,6 @@ export default function AIDigitalMarketing() {
                   ))}
                 </div>
 
-                {/* Bottom CTA Button with Hover Animation */}
                 <div className="pt-4 border-t border-white/[0.08] backdrop-blur-md">
                   <button className="w-full py-3.5 px-5 rounded-2xl bg-[#111827] border border-white/10 group-hover:border-[#2563EB] text-sm font-semibold text-white flex items-center justify-between transition-all">
                     <span>View Industries</span>
@@ -584,17 +578,16 @@ export default function AIDigitalMarketing() {
             <span className="text-[#38BDF8] text-xs font-bold uppercase tracking-widest mb-3 block">Central Command</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight mb-12">Total Marketing Visibility in One Screen</h2>
 
-            {/* Browser Mockup */}
             <div className="rounded-2xl bg-[#040816] border border-slate-800 shadow-2xl overflow-hidden text-left">
               <div className="bg-[#0B1220] px-6 py-4 border-b border-slate-800 flex items-center justify-between">
                 <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-red-500/80" />
                   <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
                   <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                  <span className="ml-4 font-mono text-xs text-[#94A3B8] hidden sm:block">https://app.synergytech.ai/campaigns/overview</span>
+                  <span className="ml-4 font-mono text-xs text-[#94A3B8] hidden sm:block">https://app.tiberiusstrategies.com/analytics/reporting</span>
                 </div>
                 <div className="flex items-center gap-3 text-xs font-mono text-[#38BDF8]">
-                  <Activity className="w-4 h-4" /> Live Tracking
+                  <Activity className="w-4 h-4" /> Live Analytics
                 </div>
               </div>
 
@@ -630,12 +623,12 @@ export default function AIDigitalMarketing() {
 
           <div className="relative border-l-2 border-[#2563EB]/40 ml-4 md:ml-32 space-y-12">
             {[
-              { step: "01", title: "Research & Data Ingestion", desc: "Connecting GA4, CRM, and ad historical data into our central neural model." },
-              { step: "02", title: "AI Predictive Analysis", desc: "Identifying high-intent search gaps, audience personas, and CPA vulnerabilities." },
-              { step: "03", title: "Model Calibration", desc: "Custom training on brand guidelines, voice rules, and compliance parameters." },
-              { step: "04", title: "Campaign Generation", desc: "Automated deployment of ad creative, GEO content, and landing page funnels." },
-              { step: "05", title: "Algorithmic Optimization", desc: "24/7 automated bid adjustments, budget reallocation, and multivariate testing." },
-              { step: "06", title: "Enterprise Scaling", desc: "Expanding winning campaigns across secondary channels and global territories." }
+              { step: "01", title: "Research & Data Ingestion", desc: "Connecting GA4, CRM, and analytics historical data into our central neural model." },
+              { step: "02", title: "AI Predictive Analysis", desc: "Identifying high-intent search gaps, audience personas, and optimization opportunities." },
+              { step: "03", title: "Model Calibration", desc: "Custom training on brand guidelines, voice rules, and conversion goals." },
+              { step: "04", title: "Campaign & Web Deployment", desc: "Automated deployment of ad creative, GEO content, and high-conversion web pages." },
+              { step: "05", title: "Algorithmic Optimization", desc: "24/7 automated adjustments, performance tracking, and multivariate testing." },
+              { step: "06", title: "Enterprise Scaling", desc: "Expanding high-performing digital assets and marketing channels seamlessly." }
             ].map((item, idx) => (
               <div key={idx} className="relative pl-8 md:pl-12 group">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2563EB] border-4 border-[#040816] group-hover:scale-125 transition-transform" />
@@ -686,9 +679,8 @@ export default function AIDigitalMarketing() {
                 <button
                   key={i}
                   onClick={() => setTestimonialIndex(i)}
-                  className={`w-3 h-3 rounded-full transition-all ${
-                    testimonialIndex === i ? "bg-[#38BDF8] w-8" : "bg-slate-700"
-                  }`}
+                  className={`w-3 h-3 rounded-full transition-all ${testimonialIndex === i ? "bg-[#38BDF8] w-8" : "bg-slate-700"
+                    }`}
                 />
               ))}
             </div>
@@ -703,17 +695,17 @@ export default function AIDigitalMarketing() {
             <div className="md:col-span-5 space-y-6">
               <span className="text-[#38BDF8] text-xs font-bold uppercase tracking-widest block">Inquiries</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold">Frequently Asked Questions</h2>
-              <p className="text-[#94A3B8]">Have questions about deploying AI marketing in your organization?</p>
+              <p className="text-[#94A3B8]">Have questions about website development and AI marketing for your organization?</p>
               <button className="px-6 py-3 bg-[#111827] border border-slate-800 text-white font-semibold rounded-xl text-sm flex items-center gap-2 hover:border-[#38BDF8]">
-                <PhoneCall className="w-4 h-4 text-[#38BDF8]" /> Book Technical Call
+                <PhoneCall className="w-4 h-4 text-[#38BDF8]" /> Schedule a Free Consultation
               </button>
             </div>
 
             <div className="md:col-span-7 space-y-4">
               {[
-                { q: "What is GEO and how does it differ from traditional SEO?", a: "Generative Engine Optimization (GEO) focuses on optimizing your digital footprint so AI models like ChatGPT, Claude, and Perplexity cite your brand in answer summaries." },
-                { q: "How quickly can we expect to see measurable ROI?", a: "Paid ad optimization and automated bidding show initial uplift within 14 days, while organic LLM GEO strategies take 60-90 days." },
-                { q: "Does the AI engine integrate with our existing CRM?", a: "Yes, we provide native multi-directional integrations with HubSpot, Salesforce, Zapier, GA4, and Meta Business Suite." }
+                { q: "What is GEO and how does it differ from traditional SEO?", a: "Generative Engine Optimization (GEO) focuses on optimizing your website and content so AI models like ChatGPT, Gemini, Copilot, and Perplexity recognize and cite your brand in AI-generated answers." },
+                { q: "Do you offer complete website design and development?", a: "Yes, we specialize in modern, responsive, mobile-first business, corporate, landing page, and e-commerce websites with speed and CRM optimization." },
+                { q: "How quickly can we expect to see results?", a: "Paid ad optimization and performance marketing yield fast initial results within weeks, while SEO and AI search optimization build compounding long-term growth over 60-90 days." }
               ].map((faq, idx) => (
                 <div key={idx} className="bg-[#111827] border border-slate-800 rounded-xl p-6">
                   <h4 className="font-bold text-white text-base mb-2">{faq.q}</h4>
@@ -725,7 +717,7 @@ export default function AIDigitalMarketing() {
         </section>
 
         {/* ===================================================================
-            10. PREMIUM CALL TO ACTION
+            10. CLOSING CALL TO ACTION
         =================================================================== */}
         <section className="py-24 px-6 md:px-16">
           <div className="max-w-[1280px] mx-auto bg-gradient-to-br from-[#0B1220] via-[#111827] to-[#0B1220] border border-[#2563EB]/40 rounded-3xl p-10 md:p-20 text-center relative overflow-hidden shadow-2xl">
@@ -733,21 +725,29 @@ export default function AIDigitalMarketing() {
 
             <div className="relative z-10 max-w-3xl mx-auto">
               <h2 className="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">
-                Ready to Scale Your Business with AI?
+                Ready to Grow?
               </h2>
-              <p className="text-[#94A3B8] text-base sm:text-lg mb-10">
-                Claim your complimentary 45-minute AI marketing audit and custom growth roadmap.
+              <p className="text-[#94A3B8] text-base sm:text-lg mb-10 leading-relaxed font-normal">
+                Let's build a stronger digital presence that attracts customers, automates growth, and delivers measurable results.
               </p>
 
-              <div className="flex flex-wrap justify-center gap-6 mb-10 text-sm font-semibold text-[#FFFFFF]">
-                <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> 100% Free Consultation</span>
-                <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> 45 Minutes Technical Audit</span>
-                <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Custom Roadmap</span>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
+                <button className="w-full sm:w-auto px-8 py-4 bg-[#2563EB] text-white font-bold rounded-xl text-sm hover:bg-blue-600 transition-all shadow-xl shadow-blue-500/25">
+                  Schedule a Free Consultation
+                </button>
+                <button className="w-full sm:w-auto px-8 py-4 bg-[#0B1220] text-white font-bold rounded-xl text-sm hover:bg-[#111827] transition-all border border-slate-700">
+                  Request a Quote
+                </button>
+                <button className="w-full sm:w-auto px-8 py-4 bg-slate-800 text-white font-bold rounded-xl text-sm hover:bg-slate-700 transition-all border border-slate-700">
+                  Start Your Project
+                </button>
               </div>
 
-              <button className="px-10 py-5 bg-[#2563EB] text-white font-bold rounded-xl text-base hover:bg-blue-600 transition-all shadow-xl shadow-blue-500/25">
-                Claim Your Free AI Audit Now
-              </button>
+              <div className="flex flex-wrap justify-center gap-6 text-sm font-semibold text-[#FFFFFF]">
+                <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Conversion-Focused Layout</span>
+                <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> SEO & GEO Optimized</span>
+                <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-[#22C55E]" /> Measurable Business Growth</span>
+              </div>
             </div>
           </div>
         </section>
