@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import AI from '../assets/AI.jpg'
+import AiMarketing from '../assets/ai_marketing.jpg'
+import optimize from '../assets/optimize.jpg'
+import s1 from '../assets/s1.jpg'
+import s2 from '../assets/s2.jpg'
+import s3 from '../assets/s3.jpg'
 import { motion, AnimatePresence } from "framer-motion";
 import {
   TrendingUp,
@@ -175,7 +181,7 @@ export default function AIDigitalMarketing() {
 
                 <div className="rounded-xl overflow-hidden border border-slate-800 relative group aspect-[16/10] bg-slate-950">
                   <img
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80"
+                    src={AI}
                     alt="Tiberius Strategies Marketing Intelligence Dashboard"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                   />
@@ -303,7 +309,7 @@ export default function AIDigitalMarketing() {
 
             <div className="lg:col-span-6 bg-[#0B1220] border border-slate-800 rounded-2xl aspect-[4/3] relative overflow-hidden group shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80"
+                src={optimize}
                 alt="AI Citation Analytics Preview"
                 className="w-full h-full object-cover opacity-85 group-hover:scale-105 transition-transform duration-700"
               />
@@ -331,7 +337,7 @@ export default function AIDigitalMarketing() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 order-2 lg:order-1 bg-[#0B1220] border border-slate-800 rounded-2xl aspect-[4/3] relative overflow-hidden group shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80"
+                src={AiMarketing}
                 alt="Content Output Metrics Preview"
                 className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
               />
@@ -396,7 +402,7 @@ export default function AIDigitalMarketing() {
 
               <div className="h-56 w-full relative overflow-hidden bg-slate-950">
                 <img
-                  src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
+                  src={s1}
                   alt="Website Development Services"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
@@ -455,12 +461,12 @@ export default function AIDigitalMarketing() {
 
               <div className="h-56 w-full relative overflow-hidden bg-slate-950">
                 <img
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"
+                  src={s2}
                   alt="AI Digital Marketing Services"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B1220] via-transparent to-transparent" />
-                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#38BDF8]/20 backdrop-blur-md border border-[#38BDF8]/40 text-[#38BDF8] text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
+                <div className="absolute top-4 left-4 px-3 py-1 rounded-full bg-[#38BDF8]/20 backdrop--md border border-[#38BDF8]/40 text-[#ffffff] text-[10px] font-bold uppercase tracking-wider flex items-center gap-1.5">
                   <Sparkles className="w-3 h-3" /> Growth Engine
                 </div>
               </div>
@@ -514,7 +520,7 @@ export default function AIDigitalMarketing() {
 
               <div className="h-56 w-full relative overflow-hidden bg-slate-950">
                 <img
-                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80"
+                  src={s3}
                   alt="Industries We Serve"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
