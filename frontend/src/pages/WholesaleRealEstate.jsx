@@ -89,22 +89,6 @@ export default function SynergyTechRealEstate() {
                   </button>
                 </motion.div>
               </div>
-
-              {/* Client Metrics Strip */}
-              <motion.div variants={fadeInUp} className="pt-8 border-t border-slate-200/80 grid grid-cols-3 gap-6 max-w-lg">
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#0f172a]">350+</div>
-                  <div className="text-xs text-[#64748b] font-medium mt-1">Enterprise Clients</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#2563eb]">$8.4B+</div>
-                  <div className="text-xs text-[#64748b] font-medium mt-1">Assets Managed</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-extrabold text-[#06b6d4]">94.2%</div>
-                  <div className="text-xs text-[#64748b] font-medium mt-1">Deal Accuracy</div>
-                </div>
-              </motion.div>
             </motion.div>
 
             {/* Right 50% - Added h-full & flex box to auto-stretch height */}
@@ -137,41 +121,17 @@ export default function SynergyTechRealEstate() {
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between p-3 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700/80">
                     <div>
                       <div className="text-[10px] text-slate-400 font-mono">PORTFOLIO ROI</div>
-                      <div className="text-base font-bold text-emerald-400">+31.4% YTD</div>
+                      <div className="text-base font-bold text-emerald-400">Positive Growth</div>
                     </div>
                     <div className="text-right">
                       <div className="text-[10px] text-slate-400 font-mono">RISK SCORE</div>
-                      <div className="text-base font-bold text-cyan-400">0.12 (Optimal)</div>
+                      <div className="text-base font-bold text-cyan-400">Optimal</div>
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>
 
-          </div>
-        </section>
-
-        {/* ===================================================================
-            2. STATISTICS SECTION
-        =================================================================== */}
-        <section className="bg-slate-950 text-white py-16 px-6 md:px-16 border-y border-slate-800">
-          <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-center">
-            <div className="p-4">
-              <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">350+</div>
-              <p className="text-sm font-medium text-slate-400 mt-2">Institutional Clients</p>
-            </div>
-            <div className="p-4">
-              <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">45+</div>
-              <p className="text-sm font-medium text-slate-400 mt-2">Enterprise Projects Built</p>
-            </div>
-            <div className="p-4">
-              <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">$8.4B+</div>
-              <p className="text-sm font-medium text-slate-400 mt-2">Property Value Analyzed</p>
-            </div>
-            <div className="p-4">
-              <div className="text-4xl sm:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">99.98%</div>
-              <p className="text-sm font-medium text-slate-400 mt-2">Platform Uptime SLA</p>
-            </div>
           </div>
         </section>
 
@@ -304,18 +264,18 @@ export default function SynergyTechRealEstate() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
                     <div className="p-4 rounded-xl bg-slate-950 border border-slate-800">
-                      <div className="text-xs text-slate-400">Off-Market Properties Scanned</div>
-                      <div className="text-2xl font-bold mt-1">14,290</div>
-                      <div className="text-[10px] text-emerald-400 mt-1">↑ 12% vs last week</div>
+                      <div className="text-xs text-slate-400">Off-Market Scanning</div>
+                      <div className="text-2xl font-bold mt-1">Active</div>
+                      <div className="text-[10px] text-emerald-400 mt-1">Continuous Updates</div>
                     </div>
                     <div className="p-4 rounded-xl bg-slate-950 border border-slate-800">
                       <div className="text-xs text-slate-400">Avg. Due Diligence Time</div>
-                      <div className="text-2xl font-bold mt-1 text-cyan-400">4.8 Hrs</div>
-                      <div className="text-[10px] text-cyan-400 mt-1">Formerly 3 Weeks</div>
+                      <div className="text-2xl font-bold mt-1 text-cyan-400">Accelerated</div>
+                      <div className="text-[10px] text-cyan-400 mt-1">Streamlined Workflow</div>
                     </div>
                     <div className="p-4 rounded-xl bg-slate-950 border border-slate-800">
                       <div className="text-xs text-slate-400">Internal Rate of Return (IRR)</div>
-                      <div className="text-2xl font-bold mt-1 text-emerald-400">28.4%</div>
+                      <div className="text-2xl font-bold mt-1 text-emerald-400">Optimized</div>
                       <div className="text-[10px] text-slate-400 mt-1">Risk Adjusted</div>
                     </div>
                   </div>
@@ -327,7 +287,6 @@ export default function SynergyTechRealEstate() {
                         <tr className="text-slate-400 border-b border-slate-800">
                           <th className="pb-3">Property Asset</th>
                           <th className="pb-3">Location</th>
-                          <th className="pb-3">Underwritten Cap</th>
                           <th className="pb-3">AI Confidence</th>
                           <th className="pb-3 text-right">Action</th>
                         </tr>
@@ -336,15 +295,13 @@ export default function SynergyTechRealEstate() {
                         <tr>
                           <td className="py-3 font-medium">Apex Industrial Park</td>
                           <td className="py-3 text-slate-400">Phoenix, AZ</td>
-                          <td className="py-3">$42.5M</td>
-                          <td className="py-3 text-emerald-400 font-bold">98.2%</td>
+                          <td className="py-3 text-emerald-400 font-bold">High</td>
                           <td className="py-3 text-right"><span className="px-2 py-1 rounded bg-blue-600/20 text-blue-400 font-medium">Underwrite</span></td>
                         </tr>
                         <tr>
                           <td className="py-3 font-medium">Horizon Logistics Hub</td>
                           <td className="py-3 text-slate-400">Dallas, TX</td>
-                          <td className="py-3">$88.0M</td>
-                          <td className="py-3 text-emerald-400 font-bold">96.8%</td>
+                          <td className="py-3 text-emerald-400 font-bold">High</td>
                           <td className="py-3 text-right"><span className="px-2 py-1 rounded bg-blue-600/20 text-blue-400 font-medium">Underwrite</span></td>
                         </tr>
                       </tbody>
@@ -409,7 +366,7 @@ export default function SynergyTechRealEstate() {
                 <div className="flex-1 p-6 flex flex-col justify-between">
                   <div>
                     <span className="text-[11px] font-mono font-bold text-[#2563eb] uppercase tracking-wider block mb-1">
-                      01 / Lead Generation & Intelligence
+                      Lead Generation & Intelligence
                     </span>
                     <h3 className="text-xl font-bold text-[#0f172a] mb-2">
                       Off-Market Property Research & Investor Leads
@@ -479,7 +436,7 @@ export default function SynergyTechRealEstate() {
                 <div className="flex-1 p-6 flex flex-col justify-between">
                   <div>
                     <span className="text-[11px] font-mono font-bold text-[#2563eb] uppercase tracking-wider block mb-1">
-                      02 / Acquisition & Closing
+                      Acquisition & Closing
                     </span>
                     <h3 className="text-xl font-bold text-[#0f172a] mb-2">
                       Property Due Diligence & Wholesale Support
@@ -544,7 +501,6 @@ export default function SynergyTechRealEstate() {
                   onClick={() => setExpandedStep(idx)}
                   className={`p-6 rounded-2xl border transition-all cursor-pointer ${expandedStep === idx ? 'bg-blue-600 border-blue-400 text-white shadow-xl scale-102' : 'bg-slate-950/60 border-slate-800 text-slate-400 hover:border-slate-700'}`}
                 >
-                  <div className="text-xs font-mono font-semibold mb-3">{`0${idx + 1}`}</div>
                   <h4 className="text-lg font-bold text-white mb-2">{item.title}</h4>
                   <p className="text-xs leading-relaxed opacity-90">{item.desc}</p>
                 </div>
@@ -572,7 +528,7 @@ export default function SynergyTechRealEstate() {
             <div className="bg-white rounded-3xl border border-slate-200/80 p-8 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="flex justify-between items-center mb-6">
                 <span className="px-3 py-1 rounded-full bg-blue-50 text-blue-600 text-xs font-bold">Commercial Real Estate Fund</span>
-                <span className="text-xs text-slate-400 font-mono">ASSETS: $1.2B</span>
+                <span className="text-xs text-slate-400 font-mono">PORTFOLIO EXPANSION</span>
               </div>
               <h3 className="text-2xl font-bold text-[#0f172a] mb-3">Apex Capital Partners</h3>
               <p className="text-[#64748b] text-sm mb-6 leading-relaxed">
@@ -580,12 +536,12 @@ export default function SynergyTechRealEstate() {
               </p>
               <div className="grid grid-cols-2 gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 mb-6">
                 <div>
-                  <div className="text-2xl font-extrabold text-emerald-600">+$3.2M</div>
-                  <div className="text-xs text-slate-500 font-medium">Added Pipeline Value</div>
+                  <div className="text-2xl font-extrabold text-emerald-600">Expanded</div>
+                  <div className="text-xs text-slate-500 font-medium">Pipeline Growth</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-extrabold text-[#2563eb]">84%</div>
-                  <div className="text-xs text-slate-500 font-medium">Faster Lead Sourcing</div>
+                  <div className="text-2xl font-extrabold text-[#2563eb]">Accelerated</div>
+                  <div className="text-xs text-slate-500 font-medium">Lead Sourcing Speed</div>
                 </div>
               </div>
               <a href="#" className="inline-flex items-center gap-2 text-xs font-bold text-[#0f172a] hover:text-[#2563eb]">
@@ -597,7 +553,7 @@ export default function SynergyTechRealEstate() {
             <div className="bg-white rounded-3xl border border-slate-200/80 p-8 shadow-sm hover:shadow-xl transition-all duration-300">
               <div className="flex justify-between items-center mb-6">
                 <span className="px-3 py-1 rounded-full bg-cyan-50 text-cyan-600 text-xs font-bold">Industrial Wholesale Group</span>
-                <span className="text-xs text-slate-400 font-mono">ASSETS: $850M</span>
+                <span className="text-xs text-slate-400 font-mono">PORTFOLIO EXPANSION</span>
               </div>
               <h3 className="text-2xl font-bold text-[#0f172a] mb-3">Meridian Logistics Group</h3>
               <p className="text-[#64748b] text-sm mb-6 leading-relaxed">
@@ -605,12 +561,12 @@ export default function SynergyTechRealEstate() {
               </p>
               <div className="grid grid-cols-2 gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 mb-6">
                 <div>
-                  <div className="text-2xl font-extrabold text-emerald-600">48%</div>
-                  <div className="text-xs text-slate-500 font-medium">Shorter Acquisition Cycle</div>
+                  <div className="text-2xl font-extrabold text-emerald-600">Reduced</div>
+                  <div className="text-xs text-slate-500 font-medium">Acquisition Cycle Time</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-extrabold text-[#2563eb]">3.8x</div>
-                  <div className="text-xs text-slate-500 font-medium">Deal Match Rate</div>
+                  <div className="text-2xl font-extrabold text-[#2563eb]">Improved</div>
+                  <div className="text-xs text-slate-500 font-medium">Deal Match Precision</div>
                 </div>
               </div>
               <a href="#" className="inline-flex items-center gap-2 text-xs font-bold text-[#0f172a] hover:text-[#2563eb]">

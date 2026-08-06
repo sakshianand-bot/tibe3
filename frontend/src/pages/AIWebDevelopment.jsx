@@ -54,18 +54,14 @@ export default function AIDigitalMarketing() {
       name: "Sarah Jenkins",
       role: "CMO at FutureFlow Tech",
       quote:
-        "Tiberius Strategies fundamentally transformed our customer acquisition engine. Their AI GEO strategy increased our organic LLM citations and traffic by 240% in just six months.",
-      metric: "240%",
-      metricLabel: "Organic Traffic Lift",
+        "Tiberius Strategies fundamentally transformed our customer acquisition engine. Their AI GEO strategy significantly increased our organic LLM citations and traffic.",
       stars: 5
     },
     {
       name: "Marcus Vance",
       role: "VP Marketing, Omnipresent SaaS",
       quote:
-        "The automated lead scoring and predictive ad bidding cut our CPA by 42%. We went from guessing to scaling with absolute mathematical certainty.",
-      metric: "5.3x",
-      metricLabel: "Blended Marketing ROI",
+        "The automated lead scoring and predictive ad bidding optimized our marketing expenditure. We went from guessing to scaling with absolute certainty.",
       stars: 5
     },
     {
@@ -73,8 +69,6 @@ export default function AIDigitalMarketing() {
       role: "Head of Growth, Apex Health",
       quote:
         "Their AI content engine didn't just scale output—it preserved our medical brand voice completely while capturing zero-click generative search results.",
-      metric: "312%",
-      metricLabel: "Lead Volume Increase",
       stars: 5
     }
   ];
@@ -140,22 +134,6 @@ export default function AIDigitalMarketing() {
                   Request a Quote
                 </button>
               </motion.div>
-
-              {/* Live Metric Badges */}
-              <motion.div variants={fadeInUp} className="grid grid-cols-3 gap-4 pt-6 border-t border-[#111827]">
-                <div>
-                  <div className="text-xl sm:text-2xl font-extrabold text-[#FFFFFF]">350+</div>
-                  <div className="text-xs text-[#94A3B8] mt-1">Global Brands</div>
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-extrabold text-[#38BDF8]">35M+</div>
-                  <div className="text-xs text-[#94A3B8] mt-1">Leads Generated</div>
-                </div>
-                <div>
-                  <div className="text-xl sm:text-2xl font-extrabold text-[#22C55E]">98%</div>
-                  <div className="text-xs text-[#94A3B8] mt-1">Retention Rate</div>
-                </div>
-              </motion.div>
             </motion.div>
 
             {/* Right 40% - Image Dashboard Mockup */}
@@ -189,49 +167,17 @@ export default function AIDigitalMarketing() {
 
                   <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between p-3 rounded-xl bg-[#0B1220]/90 backdrop-blur-md border border-slate-700/80">
                     <div>
-                      <div className="text-[10px] text-[#94A3B8] font-mono">ORGANIC TRAFFIC LIFT</div>
-                      <div className="text-sm font-bold text-[#22C55E]">+243% Growth</div>
+                      <div className="text-[10px] text-[#94A3B8] font-mono">ORGANIC TRAFFIC</div>
+                      <div className="text-sm font-bold text-[#22C55E]">Active Growth</div>
                     </div>
                     <div className="text-right">
-                      <div className="text-[10px] text-[#94A3B8] font-mono">CAMPAIGN ROI</div>
-                      <div className="text-sm font-bold text-[#38BDF8]">+420%</div>
+                      <div className="text-[10px] text-[#94A3B8] font-mono">CAMPAIGN STATUS</div>
+                      <div className="text-sm font-bold text-[#38BDF8]">Optimized</div>
                     </div>
                   </div>
                 </div>
               </div>
             </motion.div>
-          </div>
-        </section>
-
-        {/* ===================================================================
-            2. ANIMATED STATISTICS STRIP
-        =================================================================== */}
-        <section className="bg-[#0B1220] py-16 px-6 md:px-16 border-y border-[#111827]">
-          <div className="max-w-[1280px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="p-4">
-              <div className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-[#2563EB] to-[#38BDF8] bg-clip-text text-transparent">
-                500+
-              </div>
-              <p className="text-sm font-medium text-[#94A3B8] mt-2">Enterprise Businesses</p>
-            </div>
-            <div className="p-4">
-              <div className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-[#2563EB] to-[#38BDF8] bg-clip-text text-transparent">
-                35M+
-              </div>
-              <p className="text-sm font-medium text-[#94A3B8] mt-2">Qualified Leads Generated</p>
-            </div>
-            <div className="p-4">
-              <div className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-[#2563EB] to-[#38BDF8] bg-clip-text text-transparent">
-                $120M+
-              </div>
-              <p className="text-sm font-medium text-[#94A3B8] mt-2">Revenue Influenced</p>
-            </div>
-            <div className="p-4">
-              <div className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-[#2563EB] to-[#38BDF8] bg-clip-text text-transparent">
-                97%
-              </div>
-              <p className="text-sm font-medium text-[#94A3B8] mt-2">Annual Retention Rate</p>
-            </div>
           </div>
         </section>
 
@@ -321,13 +267,13 @@ export default function AIDigitalMarketing() {
                     AI CITATION ANALYTICS
                   </span>
                   <span className="px-2.5 py-1 rounded-full bg-[#22C55E]/20 text-[#22C55E] text-[10px] font-mono font-bold border border-[#22C55E]/30">
-                    RANK #1 PROMPT SEARCH
+                    PROMPT SEARCH
                   </span>
                 </div>
 
                 <div className="p-3 bg-[#0B1220]/90 backdrop-blur-md rounded-xl border border-slate-700/80 flex items-center justify-between text-xs">
                   <span className="text-slate-300 font-medium">Perplexity, Gemini & ChatGPT Citations</span>
-                  <span className="font-bold text-[#38BDF8]">98.2% Visibility</span>
+                  <span className="font-bold text-[#38BDF8]">Optimized Visibility</span>
                 </div>
               </div>
             </div>
@@ -355,7 +301,7 @@ export default function AIDigitalMarketing() {
 
                 <div className="p-3 bg-[#0B1220]/90 backdrop-blur-md rounded-xl border border-slate-700/80 flex items-center justify-between text-xs">
                   <span className="text-slate-300 font-medium">Brand Communication</span>
-                  <span className="font-bold text-[#22C55E]">99.4% Match Rate</span>
+                  <span className="font-bold text-[#22C55E]">Optimal Alignment</span>
                 </div>
               </div>
             </div>
@@ -506,7 +452,7 @@ export default function AIDigitalMarketing() {
                 </div>
 
                 <div className="pt-4 border-t border-white/[0.08] backdrop-blur-md">
-                  <button className="w-full py-3.5 px-5 rounded-2xl bg-[#111827] border border-white/10 group-hover:border-[#2563EB] text-sm font-semibold text-white flex items-center justify-between transition-all">
+                  <button className="w-full py-3.5 px-5 rounded-2xl bg-[#111827] border border-white/10 group-hover:border-[#2563EB] text-sm font-semibold text-[#38BDF8] flex items-center justify-between transition-all">
                     <span>Explore Marketing</span>
                     <ArrowRight className="w-4 h-4 text-[#38BDF8] group-hover:translate-x-1.5 transition-transform" />
                   </button>
@@ -599,19 +545,19 @@ export default function AIDigitalMarketing() {
 
               <div className="p-6 md:p-8 grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="p-4 rounded-xl bg-[#111827] border border-slate-800">
-                  <div className="text-xs text-[#94A3B8]">Google Ads CTR</div>
-                  <div className="text-2xl font-bold mt-1 text-[#22C55E]">8.4%</div>
-                  <div className="text-[10px] text-emerald-400 mt-1">↑ 2.1% higher than benchmark</div>
+                  <div className="text-xs text-[#94A3B8]">Google Ads Performance</div>
+                  <div className="text-2xl font-bold mt-1 text-[#22C55E]">High CTR</div>
+                  <div className="text-[10px] text-emerald-400 mt-1">Above Benchmark</div>
                 </div>
                 <div className="p-4 rounded-xl bg-[#111827] border border-slate-800">
-                  <div className="text-xs text-[#94A3B8]">Meta Ads Conversion Rate</div>
-                  <div className="text-2xl font-bold mt-1 text-[#38BDF8]">4.2%</div>
+                  <div className="text-xs text-[#94A3B8]">Meta Ads Conversion Status</div>
+                  <div className="text-2xl font-bold mt-1 text-[#38BDF8]">Optimized</div>
                   <div className="text-[10px] text-[#38BDF8] mt-1">Real-time bidding active</div>
                 </div>
                 <div className="p-4 rounded-xl bg-[#111827] border border-slate-800">
                   <div className="text-xs text-[#94A3B8]">Cost Per Acquisition (CPA)</div>
-                  <div className="text-2xl font-bold mt-1 text-white">$14.20</div>
-                  <div className="text-[10px] text-emerald-400 mt-1">↓ 32% cost reduction</div>
+                  <div className="text-2xl font-bold mt-1 text-white">Efficiency Mode</div>
+                  <div className="text-[10px] text-emerald-400 mt-1">Cost Reduction Active</div>
                 </div>
               </div>
             </div>
@@ -629,16 +575,16 @@ export default function AIDigitalMarketing() {
 
           <div className="relative border-l-2 border-[#2563EB]/40 ml-4 md:ml-32 space-y-12">
             {[
-              { step: "01", title: "Research & Data Ingestion", desc: "Connecting GA4, CRM, and analytics historical data into our central neural model." },
-              { step: "02", title: "AI Predictive Analysis", desc: "Identifying high-intent search gaps, audience personas, and optimization opportunities." },
-              { step: "03", title: "Model Calibration", desc: "Custom training on brand guidelines, voice rules, and conversion goals." },
-              { step: "04", title: "Campaign & Web Deployment", desc: "Automated deployment of ad creative, GEO content, and high-conversion web pages." },
-              { step: "05", title: "Algorithmic Optimization", desc: "24/7 automated adjustments, performance tracking, and multivariate testing." },
-              { step: "06", title: "Enterprise Scaling", desc: "Expanding high-performing digital assets and marketing channels seamlessly." }
+              { step: "Phase I", title: "Research & Data Ingestion", desc: "Connecting GA4, CRM, and analytics historical data into our central neural model." },
+              { step: "Phase II", title: "AI Predictive Analysis", desc: "Identifying high-intent search gaps, audience personas, and optimization opportunities." },
+              { step: "Phase III", title: "Model Calibration", desc: "Custom training on brand guidelines, voice rules, and conversion goals." },
+              { step: "Phase IV", title: "Campaign & Web Deployment", desc: "Automated deployment of ad creative, GEO content, and high-conversion web pages." },
+              { step: "Phase V", title: "Algorithmic Optimization", desc: "24/7 automated adjustments, performance tracking, and multivariate testing." },
+              { step: "Phase VI", title: "Enterprise Scaling", desc: "Expanding high-performing digital assets and marketing channels seamlessly." }
             ].map((item, idx) => (
               <div key={idx} className="relative pl-8 md:pl-12 group">
                 <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-[#2563EB] border-4 border-[#040816] group-hover:scale-125 transition-transform" />
-                <span className="text-xs font-mono font-bold text-[#38BDF8] block mb-1">STEP {item.step}</span>
+                <span className="text-xs font-mono font-bold text-[#38BDF8] block mb-1">{item.step}</span>
                 <h4 className="text-xl font-bold text-white">{item.title}</h4>
                 <p className="text-sm text-[#94A3B8] mt-1 max-w-xl">{item.desc}</p>
               </div>
@@ -673,10 +619,6 @@ export default function AIDigitalMarketing() {
 
                 <div className="font-bold text-white text-lg">{testimonials[testimonialIndex].name}</div>
                 <div className="text-sm text-[#94A3B8]">{testimonials[testimonialIndex].role}</div>
-
-                <div className="mt-6 inline-block px-4 py-2 rounded-xl bg-[#111827] border border-slate-800 text-xs text-[#22C55E] font-bold">
-                  {testimonials[testimonialIndex].metricLabel}: {testimonials[testimonialIndex].metric}
-                </div>
               </motion.div>
             </AnimatePresence>
 
@@ -711,7 +653,7 @@ export default function AIDigitalMarketing() {
               {[
                 { q: "What is GEO and how does it differ from traditional SEO?", a: "Generative Engine Optimization (GEO) focuses on optimizing your website and content so AI models like ChatGPT, Gemini, Copilot, and Perplexity recognize and cite your brand in AI-generated answers." },
                 { q: "Do you offer complete website design and development?", a: "Yes, we specialize in modern, responsive, mobile-first business, corporate, landing page, and e-commerce websites with speed and CRM optimization." },
-                { q: "How quickly can we expect to see results?", a: "Paid ad optimization and performance marketing yield fast initial results within weeks, while SEO and AI search optimization build compounding long-term growth over 60-90 days." }
+                { q: "How quickly can we expect to see results?", a: "Paid ad optimization and performance marketing yield fast initial results, while SEO and AI search optimization build compounding long-term growth over time." }
               ].map((faq, idx) => (
                 <div key={idx} className="bg-[#111827] border border-slate-800 rounded-xl p-6">
                   <h4 className="font-bold text-white text-base mb-2">{faq.q}</h4>
