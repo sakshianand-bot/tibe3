@@ -1,8 +1,8 @@
 import React from 'react';
-import { 
-  FaMapMarkerAlt, 
-  FaEnvelope, 
-  FaPhone, 
+import {
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhone,
   FaChevronRight,
   FaClock
 } from 'react-icons/fa';
@@ -28,13 +28,13 @@ const Footer = () => {
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          
+
           {/* Column 1: Company Info */}
           <div className="space-y-4 -ml-2">
             <div className="flex flex-col">
               <div className="flex items-start">
-                <img 
-                  src={Logo} 
+                <img
+                  src={Logo}
                   alt="Tiberius Strategies"
                   className="h-24 w-auto object-contain mb-6 -ml-2"
                 />
@@ -46,7 +46,7 @@ const Footer = () => {
                 <div className="text-sm font-semibold">D‑U‑N‑S®: 144923452</div>
               </div> */}
             </div>
-            
+
             {/* <p className="text-gray-300 text-sm">
               Empowering businesses with strategic insights and innovative solutions for sustainable growth and market leadership.
             </p> */}
@@ -85,7 +85,7 @@ const Footer = () => {
                   <p className="text-gray-300 text-sm">600 1st Ave STE 102, Seattle, WA 98104</p>
                 </div>
               </div>
-              
+
               <div className="flex items-start pt-2">
                 <FaEnvelope className="mr-3 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
@@ -100,14 +100,14 @@ const Footer = () => {
                   <p className="text-gray-300 font-medium">Phone</p>
                   <div className="text-gray-300 text-sm space-y-1">
                     <p><a href="tel:+12068752651" className="hover:text-blue-400 transition-colors">+1 (206) 875-2651</a></p>
-                    <p><a href="tel:+14256202417" className="hover:text-blue-400 transition-colors">+1 (425) 620-2417</a></p>
-                    <p><a href="tel:+12535444781" className="hover:text-blue-400 transition-colors">+1 (253) 544-4781</a></p>
+                    <p><a href="tel:+14256202417" className="hover:text-blue-400 transition-colors">+1 (888) 225-6920</a></p>
+                    {/* <p><a href="tel:+12535444781" className="hover:text-blue-400 transition-colors">+1 (253) 544-4781</a></p>
                     <p><a href="tel:+15092673083" className="hover:text-blue-400 transition-colors">+1 (509) 267-3083</a></p>
-                    <p><a href="tel:+13605836776" className="hover:text-blue-400 transition-colors">+1 (360) 583-6776</a></p>
+                    <p><a href="tel:+13605836776" className="hover:text-blue-400 transition-colors">+1 (360) 583-6776</a></p> */}
                   </div>
                 </div>
               </div>
-              
+
               <div className="flex items-start pt-2">
                 <FaClock className="mr-3 text-blue-400 mt-1 flex-shrink-0" />
                 <div>
@@ -130,28 +130,28 @@ const Footer = () => {
                 {currentYear} Tiberius Strategies. All rights reserved.
               </p>
             </div>
-            
+
             <div className="flex flex-wrap justify-center gap-4 md:gap-6">
-              <Link 
-                to={ROUTES.PUBLIC.PRIVACY_POLICY} 
+              <Link
+                to={ROUTES.PUBLIC.PRIVACY_POLICY}
                 className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
               >
                 Privacy Policy
               </Link>
 
-              <Link 
+              <Link
                 to={ROUTES.PUBLIC.TERMS_AND_CONDITIONS}
                 className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
               >
                 Terms and Conditions
               </Link>
-              <Link 
+              <Link
                 to={ROUTES.PUBLIC.COOKIE_POLICY}
                 className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
               >
                 Cookie Policy
               </Link>
-              <Link 
+              <Link
                 to={ROUTES.PUBLIC.DISCLAIMER}
                 className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
               >
@@ -159,7 +159,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          
+
           {/* Disclaimer */}
           <div className="mt-4 pt-4 border-t border-gray-800">
             <p className="text-gray-500 text-xs text-center">

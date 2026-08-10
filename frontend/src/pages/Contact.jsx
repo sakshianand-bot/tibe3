@@ -18,9 +18,9 @@ const Contact = () => {
     <div className="min-h-screen bg-sky-50 font-sans">
       {/* Main Container */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-start">
-          
+
           {/* LEFT SIDE: Content & Contact Info */}
           <div className="lg:col-span-5 space-y-12 lg:sticky lg:top-8">
             <div>
@@ -72,7 +72,7 @@ const Contact = () => {
             </div>
           </div>
 
-{/* RIGHT SIDE: Phone Contact Card */ }
+          {/* RIGHT SIDE: Phone Contact Card */}
           <div className="lg:col-span-7">
             <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-sky-100 p-8">
               <div className="flex items-center gap-4 mb-6">
@@ -88,9 +88,9 @@ const Contact = () => {
                   +1 (206) 875-2651
                 </a>
                 <a href="tel:+14256202417" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition">
-                  +1 (425) 620-2417
+                  +1 (888) 225-6920
                 </a>
-                <a href="tel:+12535444781" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition">
+                {/* <a href="tel:+12535444781" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition">
                   +1 (253) 544-4781
                 </a>
                 <a href="tel:+15092673083" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition">
@@ -98,11 +98,11 @@ const Contact = () => {
                 </a>
                 <a href="tel:+13605836776" className="block rounded-3xl border border-sky-100 bg-sky-50 px-5 py-5 text-sky-700 font-semibold hover:border-sky-200 hover:bg-sky-100 transition col-span-full">
                   +1 (360) 583-6776
-                </a>
+                </a> */}
               </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
 
       {/* Floating Helper Popup */}
